@@ -1,10 +1,28 @@
 
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>峴港會安旅行</title>
-<body style="background:#e6f1e9;text-align:center;font-family:sans-serif;padding:30px">
-<h1>🌴 2027 峴港・會安旅行</h1>
-<p>16人同行｜旅行網站測試成功！</p>
-</body></html>
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2027 峴港・會安旅行</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:#45594a;font:15px/1.8 -apple-system,sans-serif}header{text-align:center;background:#e4ece3;padding:35px 12px}h1{font-size:28px}h2{font-size:20px;margin-top:0}.sub{letter-spacing:3px;font-size:11px}main{max-width:750px;margin:auto;padding:18px 15px 100px}.card{background:white;border-radius:17px;padding:20px;margin-bottom:15px;box-shadow:0 3px 15px #00000009}.muted{color:#829083;font-size:13px}.item{border-bottom:1px solid #eee;padding:10px 0}.item:last-child{border:0}.time{color:#52745c;font-weight:bold}a{color:#427352}.page{display:none}.page.on{display:block}nav{position:fixed;bottom:0;left:0;right:0;background:white;display:grid;grid-template-columns:repeat(6,1fr);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -3px 15px #0001}button{border:0;background:white;padding:12px 0;color:#617467;font-size:12px}button.on{background:#e4ece3;font-weight:bold}
+</style>
+<header><div class="sub">VIETNAM · TRAVEL JOURNAL</div><h1>🌿 峴港・會安慢旅行</h1><div>2027.01.18 起｜16人同行</div><p id="days"></p></header>
+<main>
+<section class="page on" id="home"><div class="card"><h2>旅行手帳</h2><p>一起去越南看海、散步、吃美食，收藏16個人的旅行回憶。</p><p class="muted">返程日期、交通及未確認資訊均待補充。</p></div><div class="card"><h2>每日總覽</h2><div id="summary"></div></div></section>
+<section class="page" id="trip"><div class="card"><h2>每日行程</h2><div id="schedule"></div></div></section>
+<section class="page" id="stay"><div class="card"><h2>🏨 住宿</h2><h3>Vinpearl Resort & Golf Nam Hội An</h3><p>1/18 入住、1/20 退房：改期確認待補充。房型、房數待補充。</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Vinpearl+Resort+Golf+Nam+Hoi+An">飯店導航</a></div><div class="card"><h3>Son Hoi An Boutique Hotel & Spa</h3><p>預計1/20入住；退房、房型、房數待補充。</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Son+Hoi+An+Boutique+Hotel">飯店導航</a></div></section>
+<section class="page" id="food"><div class="card"><h2>🍜 美食</h2><p>1/18：峴港市區晚餐、超市採買（待確認）</p><p>1/19：飯店早餐、樂園午餐；晚餐選擇會安古城或飯店。</p><p>1/20：飯店早餐、會安午餐、印象樂園晚餐。</p><p>其餘餐廳、菜單與費用待補充。</p></div></section>
+<section class="page" id="money"><div class="card"><h2>💰 旅行費用</h2><div id="cost"></div><p class="muted">所有金額尚待確認，不以0元代替。</p></div></section>
+<section class="page" id="ready"><div class="card"><h2>🎒 出發準備</h2><div id="packing"></div><p class="muted">同行16人名單、分房及交通車輛待補充。公開網站不放護照號碼與私人資料。</p></div></section>
+</main>
+<nav><button class="on" onclick="go('home',this)">🏠<div>首頁</div></button><button onclick="go('trip',this)">🗺️<div>行程</div></button><button onclick="go('stay',this)">🏨<div>住宿</div></button><button onclick="go('food',this)">🍜<div>美食</div></button><button onclick="go('money',this)">💰<div>記帳</div></button><button onclick="go('ready',this)">🎒<div>準備</div></button></nav>
+<script>
+const data=[
+['1/18 抵達峴港',[['待確認','機場接機'],['待確認','市區晚餐、超市採買'],['待確認','前往南會安飯店']]],
+['1/19 VinWonders',[['08:00','早餐'],['09:30','出發前往VinWonders'],['12:00','園區午餐'],['14:00','繼續玩或回飯店休息'],['17:00','方案一：會安古城晚餐'],['18:30','方案一：逛古街'],['20:30','方案一：按摩'],['17:30','方案二：飯店晚餐']]],
+['1/20 會安印象秀',[['08:00','早餐、游泳、沙灘'],['11:00','退房前往Son Hoi An飯店'],['12:00','會安午餐'],['14:00','椰子船'],['16:30','前往會安印象樂園'],['18:30','園內晚餐'],['20:00','會安印象秀']]],
+['1/21 待補充',[]],['1/22 待補充',[]],['1/23 待補充',[]]];
+data.forEach((d,i)=>{summary.innerHTML+='<div class="item">DAY '+(i+1)+'｜'+d[0]+'</div>';schedule.innerHTML+='<h3>'+d[0]+'</h3>'+(d[1].length?d[1].map(x=>'<div class="item"><span class="time">'+x[0]+'</span> '+x[1]+'</div>').join(''):'<p class="muted">行程待補充</p>')});
+['機票','住宿','交通','餐飲','門票活動','保險','其他'].forEach(x=>cost.innerHTML+='<div class="item">'+x+'：待補充</div>');
+['護照有效期限','越南電子簽證','機票與飯店確認','旅遊保險','越南盾','泳衣與薄外套','常備藥品','充電器與行動電源'].forEach(x=>packing.innerHTML+='<div class="item">□ '+x+'</div>');
+function go(id,b){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('on',x.id===id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));scrollTo(0,0)}
+let n=Math.ceil((new Date('2027-01-18T00:00:00+07:00')-new Date())/86400000);days.textContent=n>0?'距離出發還有 '+n+' 天':'旅行日期已到';
+</script></html>
