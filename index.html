@@ -1,27 +1,705 @@
-<!doctype html>
-<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2027 峴港・會安旅行</title>
+
+
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>2027 峴港會安家族旅行</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f7f5ef;color:#45594a;font:15px/1.8 -apple-system,sans-serif}header{text-align:center;background:#e4ece3;padding:35px 12px}h1{font-size:28px}h2{font-size:20px;margin-top:0}.sub{letter-spacing:3px;font-size:11px}main{max-width:750px;margin:auto;padding:18px 15px 100px}.card{background:white;border-radius:17px;padding:20px;margin-bottom:15px;box-shadow:0 3px 15px #00000009}.muted{color:#829083;font-size:13px}.item{border-bottom:1px solid #eee;padding:10px 0}.item:last-child{border:0}.time{color:#52745c;font-weight:bold}a{color:#427352}.page{display:none}.page.on{display:block}nav{position:fixed;bottom:0;left:0;right:0;background:white;display:grid;grid-template-columns:repeat(6,1fr);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -3px 15px #0001}button{border:0;background:white;padding:12px 0;color:#617467;font-size:12px}button.on{background:#e4ece3;font-weight:bold}
+
+:root{--bg:#f8f7f2;--card:#fff;--ink:#34453c;--muted:#78877e;--green:#739784;--line:#e5e8e1}
+
+*{box-sizing:border-box}
+
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Noto Sans TC",sans-serif;line-height:1.75}
+
+header{background:linear-gradient(135deg,#d6e6da,#f4e9d8);padding:42px 18px;text-align:center}
+
+header small{letter-spacing:3px}
+
+h1{font-size:30px;margin:10px 0}
+
+h2{font-size:21px;margin:0 0 12px}
+
+h3{font-size:17px;margin:10px 0}
+
+p{margin:7px 0}
+
+nav{position:sticky;top:0;z-index:10;background:#ffffffed;display:flex;overflow:auto;gap:7px;padding:10px;box-shadow:0 2px 8px #00000008}
+
+nav button{border:0;border-radius:22px;padding:10px 14px;background:#eaf0e9;color:var(--ink);white-space:nowrap}
+
+nav button.on{background:var(--green);color:white}
+
+main{max-width:850px;margin:auto;padding:14px}
+
+section{display:none}
+
+section.on{display:block}
+
+.card,details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:13px 0}
+
+.muted{color:var(--muted);font-size:14px}
+
+.tag{display:inline-block;background:#e8f0e9;color:#527962;border-radius:20px;padding:3px 11px;font-size:12px}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+
+.stat{text-align:center;background:#edf3eb;border-radius:12px;padding:12px 4px;font-size:12px}
+
+.stat b{display:block;font-size:23px}
+
+.item{padding:11px 0;border-bottom:1px dashed var(--line)}
+
+.item:last-child{border:0}
+
+.time{font-weight:bold;color:var(--green);margin-right:9px}
+
+a{color:#43816b;text-decoration:none}
+
+.link{display:inline-block;border:1px solid #d4e4d9;border-radius:20px;padding:6px 12px;margin:5px 4px 5px 0;font-size:13px}
+
+summary{font-weight:bold;font-size:18px;cursor:pointer}
+
+input[type=checkbox]{accent-color:var(--green);transform:scale(1.15)}
+
+footer{text-align:center;color:var(--muted);padding:28px;font-size:13px}
+
+@media(prefers-color-scheme:dark){
+
+body.dark{--bg:#202923;--card:#2b362e;--ink:#e8efe8;--muted:#aab9ae;--line:#435348;--green:#a1c4ac}
+
+}
+
+.dark nav{background:#29372f}
+
+.dark nav button{color:#e8efe8;background:#435548}
+
+.dark nav button.on{background:#608a70}
+
+.dark .stat{background:#394d40}
+
 </style>
-<header><div class="sub">VIETNAM · TRAVEL JOURNAL</div><h1>🌿 峴港・會安慢旅行</h1><div>2027.01.18 起｜16人同行</div><p id="days"></p></header>
+
+</head>
+
+<body>
+
+<header>
+
+<small>FAMILY TRAVEL JOURNAL</small>
+
+<h1>峴港・會安 🌿</h1>
+
+<p>2027.01.18 — 01.23</p>
+
+<p>六天五夜｜16人家族旅行</p>
+
+<button onclick="document.body.classList.toggle('dark')" style="border:0;border-radius:20px;padding:8px 16px">☾ 切換深色模式</button>
+
+</header>
+
+<nav>
+
+<button class="on" onclick="tab('home',this)">首頁</button>
+
+<button onclick="tab('plan',this)">每日行程</button>
+
+<button onclick="tab('hotel',this)">住宿航班</button>
+
+<button onclick="tab('map',this)">路線地圖</button>
+
+<button onclick="tab('places',this)">收藏店家</button>
+
+<button onclick="tab('todo',this)">出發準備</button>
+
+</nav>
+
 <main>
-<section class="page on" id="home"><div class="card"><h2>旅行手帳</h2><p>一起去越南看海、散步、吃美食，收藏16個人的旅行回憶。</p><p class="muted">返程日期、交通及未確認資訊均待補充。</p></div><div class="card"><h2>每日總覽</h2><div id="summary"></div></div></section>
-<section class="page" id="trip"><div class="card"><h2>每日行程</h2><div id="schedule"></div></div></section>
-<section class="page" id="stay"><div class="card"><h2>🏨 住宿</h2><h3>Vinpearl Resort & Golf Nam Hội An</h3><p>1/18 入住、1/20 退房：改期確認待補充。房型、房數待補充。</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Vinpearl+Resort+Golf+Nam+Hoi+An">飯店導航</a></div><div class="card"><h3>Son Hoi An Boutique Hotel & Spa</h3><p>預計1/20入住；退房、房型、房數待補充。</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Son+Hoi+An+Boutique+Hotel">飯店導航</a></div></section>
-<section class="page" id="food"><div class="card"><h2>🍜 美食</h2><p>1/18：峴港市區晚餐、超市採買（待確認）</p><p>1/19：飯店早餐、樂園午餐；晚餐選擇會安古城或飯店。</p><p>1/20：飯店早餐、會安午餐、印象樂園晚餐。</p><p>其餘餐廳、菜單與費用待補充。</p></div></section>
-<section class="page" id="money"><div class="card"><h2>💰 旅行費用</h2><div id="cost"></div><p class="muted">所有金額尚待確認，不以0元代替。</p></div></section>
-<section class="page" id="ready"><div class="card"><h2>🎒 出發準備</h2><div id="packing"></div><p class="muted">同行16人名單、分房及交通車輛待補充。公開網站不放護照號碼與私人資料。</p></div></section>
+
+<section id="home" class="on">
+
+<div class="card">
+
+<span class="tag">旅行倒數</span>
+
+<h2 id="countTitle">距離出發還有</h2>
+
+<div class="grid">
+
+<div class="stat"><b id="days">--</b>天</div>
+
+<div class="stat"><b id="hours">--</b>小時</div>
+
+<div class="stat"><b id="minutes">--</b>分鐘</div>
+
+<div class="stat"><b id="seconds">--</b>秒</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>☀️ 此刻關注</h2>
+
+<p id="next">正在讀取行程……</p>
+
+<p class="muted">依據行程時間自動顯示下一個活動。</p>
+
+</div>
+
+<div class="card">
+
+<h2>旅程亮點</h2>
+
+<p>🌴 南會安珍珠島樂園</p>
+
+<p>🏮 會安古鎮與印象秀</p>
+
+<p>🛶 椰子林竹籃船</p>
+
+<p>💆 峴港按摩與咖啡巡禮</p>
+
+<p>🌊 美溪海灘、飯店放空</p>
+
+</div>
+
+</section>
+
+<section id="plan">
+
+<h2>📅 六天完整行程</h2>
+
+<p class="muted">點日期可展開；點景點可開啟 Google Maps。</p>
+
+<div id="schedule"></div>
+
+</section>
+
+<section id="hotel">
+
+<div class="card">
+
+<h2>✈️ 中華航空</h2>
+
+<p><b>1/18 去程 CI0789</b></p>
+
+<p>桃園 14:30 → 峴港 16:25</p>
+
+<hr>
+
+<p><b>1/23 回程 CI0788</b></p>
+
+<p>峴港 10:25 → 桃園 14:10</p>
+
+<p class="muted">以上為兩地當地時間，出發前再核對航班。</p>
+
+</div>
+
+<div class="card">
+
+<span class="tag">1/18–1/20｜兩晚</span>
+
+<h2>Vinpearl Resort & Golf Nam Hoi An</h2>
+
+<p>南會安度假村｜8間房、16人</p>
+
+<a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Vinpearl+Resort+Golf+Nam+Hoi+An">📍 地圖導航</a>
+
+<p class="muted">接駁車時間、座位及行李空間待確認。</p>
+
+</div>
+
+<div class="card">
+
+<span class="tag">1/20–1/21｜一晚</span>
+
+<h2>Son Hoi An Boutique Hotel & Spa</h2>
+
+<p>114/4 Đào Duy Từ, Hội An</p>
+
+<a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Son+Hoi+An+Boutique+Hotel+Spa">📍 地圖導航</a>
+
+<p class="muted">14:00後入住，12:30抵達可先詢問寄放行李。</p>
+
+</div>
+
+<div class="card">
+
+<span class="tag">1/21–1/23｜兩晚</span>
+
+<h2>HAIAN Beach Hotel & Spa</h2>
+
+<p>278 Võ Nguyên Giáp, Đà Nẵng</p>
+
+<p>美溪海灘旁、頂樓無邊際泳池。</p>
+
+<a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=HAIAN+Beach+Hotel+Spa+Da+Nang">📍 地圖導航</a>
+
+<p class="muted">機場接駁是否適用16人須確認。</p>
+
+</div>
+
+</section>
+
+<section id="map">
+
+<div class="card">
+
+<h2>🗺️ 旅行區域示意</h2>
+
+<p class="muted">由北往南排列，非精確比例地圖。</p>
+
+<svg viewBox="0 0 320 450" style="width:100%">
+
+<rect width="320" height="450" rx="18" fill="#edf3e8"/>
+
+<path d="M230 0Q205 90 225 150T210 290Q190 370 205 450H320V0Z" fill="#c9e5e8"/>
+
+<path d="M75 55Q135 120 110 170T135 290T145 390" fill="none" stroke="#91a996" stroke-width="5" stroke-dasharray="8 8"/>
+
+<g font-size="13" font-family="sans-serif" fill="#385746">
+
+<circle cx="75" cy="55" r="8" fill="#729987"/>
+
+<text x="90" y="58">峴港機場</text>
+
+<circle cx="110" cy="170" r="8" fill="#729987"/>
+
+<text x="125" y="164">美溪海灘</text>
+
+<text x="125" y="182">HAIAN 飯店</text>
+
+<circle cx="135" cy="290" r="8" fill="#729987"/>
+
+<text x="150" y="285">會安古鎮</text>
+
+<text x="150" y="302">Son Hoi An</text>
+
+<circle cx="145" cy="390" r="8" fill="#729987"/>
+
+<text x="160" y="385">南會安</text>
+
+<text x="160" y="402">Vinpearl・樂園</text>
+
+<text x="260" y="230">海</text>
+
+</g>
+
+</svg>
+
+</div>
+
+<div class="card">
+
+<h2>每日交通導航</h2>
+
+<div id="routes"></div>
+
+</div>
+
+</section>
+
+<section id="places">
+
+<h2>♡ 姊妹們收藏的打卡地</h2>
+
+<p class="muted">以下為收藏名單，並非已訂位。營業時間與價格出發前再確認。</p>
+
+<div id="favorites"></div>
+
+</section>
+
+<section id="todo">
+
+<div class="card">
+
+<h2>✓ 出發前待辦</h2>
+
+<div id="checklist"></div>
+
+<p class="muted">勾選狀態會儲存在此裝置的瀏覽器中。</p>
+
+</div>
+
+<div class="card">
+
+<h2>旅行小提醒</h2>
+
+<p>🛂 確認16人護照及越南簽證。</p>
+
+<p>💵 準備越南盾、信用卡。</p>
+
+<p>📱 安裝 Google Maps、翻譯與網路 eSIM。</p>
+
+<p>🧥 一月帶薄外套、防雨用品。</p>
+
+<p>🚐 包車確認16人座位與行李空間。</p>
+
+<p>🌊 游泳依天氣與海況決定。</p>
+
+</div>
+
+</section>
+
 </main>
-<nav><button class="on" onclick="go('home',this)">🏠<div>首頁</div></button><button onclick="go('trip',this)">🗺️<div>行程</div></button><button onclick="go('stay',this)">🏨<div>住宿</div></button><button onclick="go('food',this)">🍜<div>美食</div></button><button onclick="go('money',this)">💰<div>記帳</div></button><button onclick="go('ready',this)">🎒<div>準備</div></button></nav>
+
+<footer>DA NANG & HOI AN · FAMILY TRIP 2027 ♡</footer>
+
 <script>
-const data=[
-['1/18 抵達峴港',[['待確認','機場接機'],['待確認','市區晚餐、超市採買'],['待確認','前往南會安飯店']]],
-['1/19 VinWonders',[['08:00','早餐'],['09:30','出發前往VinWonders'],['12:00','園區午餐'],['14:00','繼續玩或回飯店休息'],['17:00','方案一：會安古城晚餐'],['18:30','方案一：逛古街'],['20:30','方案一：按摩'],['17:30','方案二：飯店晚餐']]],
-['1/20 會安印象秀',[['08:00','早餐、游泳、沙灘'],['11:00','退房前往Son Hoi An飯店'],['12:00','會安午餐'],['14:00','椰子船'],['16:30','前往會安印象樂園'],['18:30','園內晚餐'],['20:00','會安印象秀']]],
-['1/21 待補充',[]],['1/22 待補充',[]],['1/23 待補充',[]]];
-data.forEach((d,i)=>{summary.innerHTML+='<div class="item">DAY '+(i+1)+'｜'+d[0]+'</div>';schedule.innerHTML+='<h3>'+d[0]+'</h3>'+(d[1].length?d[1].map(x=>'<div class="item"><span class="time">'+x[0]+'</span> '+x[1]+'</div>').join(''):'<p class="muted">行程待補充</p>')});
-['機票','住宿','交通','餐飲','門票活動','保險','其他'].forEach(x=>cost.innerHTML+='<div class="item">'+x+'：待補充</div>');
-['護照有效期限','越南電子簽證','機票與飯店確認','旅遊保險','越南盾','泳衣與薄外套','常備藥品','充電器與行動電源'].forEach(x=>packing.innerHTML+='<div class="item">□ '+x+'</div>');
-function go(id,b){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('on',x.id===id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));scrollTo(0,0)}
-let n=Math.ceil((new Date('2027-01-18T00:00:00+07:00')-new Date())/86400000);days.textContent=n>0?'距離出發還有 '+n+' 天':'旅行日期已到';
-</script></html>
+
+function tab(id,btn){
+
+document.querySelectorAll("main section").forEach(x=>x.classList.remove("on"));
+
+document.getElementById(id).classList.add("on");
+
+document.querySelectorAll("nav button").forEach(x=>x.classList.remove("on"));
+
+btn.classList.add("on");
+
+window.scrollTo(0,0);
+
+}
+
+function map(q){
+
+return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+
+}
+
+function link(name,q){
+
+return '<a target="_blank" rel="noopener" href="'+map(q)+'">'+name+'</a>';
+
+}
+
+const days=[
+
+{
+
+title:"DAY 1｜1/18（一） 抵達峴港",
+
+items:[
+
+["14:30","桃園起飛 CI0789"],
+
+["16:25","抵達峴港機場"],
+
+["17:40","換匯、集合"],
+
+["18:00","預計搭乘飯店接駁車（待確認）"],
+
+["19:30","入住 Vinpearl Resort & Golf Nam Hoi An"],
+
+["20:00","飯店晚餐"]
+
+]},
+
+{
+
+title:"DAY 2｜1/19（二） 珍珠島樂園・會安古鎮",
+
+items:[
+
+["08:00","飯店早餐"],
+
+["09:30","出發前往 "+link("VinWonders Nam Hội An","VinWonders Nam Hoi An")],
+
+["10:00","河川野生動物園、民俗文化區、園區遊玩"],
+
+["12:00","園區午餐／回飯店用餐"],
+
+["14:00","繼續遊玩或回飯店休息"],
+
+["16:30","包車前往會安古鎮"],
+
+["18:30",link("Morning Glory Signature","Morning Glory Signature Hoi An")+" 晚餐（待訂位）"],
+
+["19:30","古鎮散步、燈籠街拍照"],
+
+["21:00","返回飯店"]
+
+]},
+
+{
+
+title:"DAY 3｜1/20（三） 椰子船・會安印象秀",
+
+items:[
+
+["08:00","早餐"],
+
+["09:00","飯店泳池與自由活動"],
+
+["12:00","退房前往 Son Hoi An"],
+
+["12:30","抵達飯店，先寄放行李"],
+
+["13:00","越南法國麵包午餐"],
+
+["14:30",link("Hanh Coconut 竹籃船","Hanh Coconut Hoi An")],
+
+["18:00","包車前往會安印象樂園"],
+
+["18:30",link("Nón Lá 餐廳","Non La Restaurant Hoi An Memories")+" 晚餐"],
+
+["20:00",link("會安印象秀","Hoi An Memories Show")],
+
+["21:00","表演後集合搭車返飯店"]
+
+]},
+
+{
+
+title:"DAY 4｜1/21（四） 會安慢遊・峴港",
+
+items:[
+
+["08:00","飯店早餐"],
+
+["10:00","自行車古鎮慢遊／泳池／人力三輪車"],
+
+["11:30","退房"],
+
+["12:30","抵達 HAIAN Beach Hotel，先寄放行李"],
+
+["13:00","峴港午餐（待決定）"],
+
+["14:30","購物、下午茶或按摩"],
+
+["18:00","晚餐（待決定）"],
+
+["20:00","美溪海灘散步或自由活動"]
+
+]},
+
+{
+
+title:"DAY 5｜1/22（五） 峴港放鬆日",
+
+items:[
+
+["08:00","飯店早餐"],
+
+["10:00","按摩 SPA"],
+
+["12:00","午餐（待決定）"],
+
+["14:00","咖啡廳、下午茶與購物"],
+
+["17:00","晚餐（待決定）"],
+
+["晚上","自由活動、整理行李"]
+
+]},
+
+{
+
+title:"DAY 6｜1/23（六） 返回台灣",
+
+items:[
+
+["06:30","早餐（須確認飯店供餐時間）"],
+
+["07:30","前往峴港機場"],
+
+["08:00","機場報到"],
+
+["10:25","CI0788 峴港起飛"],
+
+["14:10","抵達桃園機場"]
+
+]}
+
+];
+
+document.getElementById("schedule").innerHTML=days.map((d,i)=>
+
+'<details '+(i===0?'open':'')+'><summary>'+d.title+'</summary>'+
+
+d.items.map(x=>'<div class="item"><span class="time">'+x[0]+'</span>'+x[1]+'</div>').join("")+
+
+'</details>').join("");
+
+const favorites=[
+
+["Five Senses Spa","Hoi An","按摩 SPA"],
+
+["Chillax Eatery & Hangout","Hoi An","餐廳・咖啡"],
+
+["Tân Coffee","Hoi An","咖啡"],
+
+["Ylang Ylang Hoiana Spa","Hoiana","按摩 SPA"],
+
+["Nhà hàng hải sản A Rồi","Hoi An","海鮮餐廳"],
+
+["Bếp Cuốn Đà Nẵng","Da Nang","越南料理"],
+
+["Nguon Spa Da Nang","Hoang Ke Viem Da Nang","按摩 SPA"],
+
+["Bếp Hến","Da Nang","餐廳"],
+
+["Trees Spa Da Nang","Da Nang","按摩 SPA"],
+
+["Recharged Da Nang","Da Nang","桑拿・冰浴・SPA"]
+
+];
+
+document.getElementById("favorites").innerHTML=favorites.map(x=>
+
+'<div class="card"><span class="tag">'+x[2]+'</span><h3>'+x[0]+'</h3><p class="muted">'+x[1]+'</p><a class="link" target="_blank" href="'+map(x[0]+" "+x[1])+'">📍 查看地圖與介紹</a></div>'
+
+).join("");
+
+const routes=[
+
+["1/18 機場 → Vinpearl","Da Nang International Airport","Vinpearl Resort Golf Nam Hoi An"],
+
+["1/19 Vinpearl → 樂園","Vinpearl Resort Golf Nam Hoi An","VinWonders Nam Hoi An"],
+
+["1/20 Vinpearl → Son Hoi An","Vinpearl Resort Golf Nam Hoi An","Son Hoi An Boutique Hotel Spa"],
+
+["1/21 會安 → HAIAN","Son Hoi An Boutique Hotel Spa","HAIAN Beach Hotel Spa Da Nang"],
+
+["1/23 HAIAN → 機場","HAIAN Beach Hotel Spa Da Nang","Da Nang International Airport"]
+
+];
+
+document.getElementById("routes").innerHTML=routes.map(r=>{
+
+let url="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(r[1])+"&destination="+encodeURIComponent(r[2]);
+
+return '<a class="link" target="_blank" href="'+url+'">'+r[0]+'</a>';
+
+}).join("");
+
+const tasks=[
+
+"收齊16人護照資料",
+
+"申請越南電子簽證",
+
+"確認1/18飯店機場接駁",
+
+"確認1/19珍珠島樂園門票",
+
+"預訂1/19會安晚餐",
+
+"確認1/20椰子船16人活動",
+
+"預訂1/20會安印象秀門票",
+
+"確認印象秀來回包車",
+
+"確認1/21會安至峴港包車",
+
+"預約峴港按摩店",
+
+"確認1/23機場接送",
+
+"確認回程早餐與行李"
+
+];
+
+document.getElementById("checklist").innerHTML=tasks.map((t,i)=>
+
+'<div class="item"><label><input type="checkbox" id="task'+i+'" onchange="saveTask('+i+',this.checked)">　'+t+'</label></div>'
+
+).join("");
+
+function saveTask(i,v){
+
+try{localStorage.setItem("danangTask"+i,v?"1":"0")}catch(e){}
+
+}
+
+tasks.forEach((_,i)=>{
+
+try{document.getElementById("task"+i).checked=localStorage.getItem("danangTask"+i)==="1"}catch(e){}
+
+});
+
+const events=[
+
+["2027-01-18T14:30:00+08:00","桃園機場起飛"],
+
+["2027-01-18T16:25:00+07:00","抵達峴港"],
+
+["2027-01-18T19:30:00+07:00","入住 Vinpearl"],
+
+["2027-01-19T09:30:00+07:00","出發前往珍珠島樂園"],
+
+["2027-01-19T16:30:00+07:00","前往會安古鎮"],
+
+["2027-01-20T12:00:00+07:00","退房前往 Son Hoi An"],
+
+["2027-01-20T14:30:00+07:00","椰子林竹籃船"],
+
+["2027-01-20T20:00:00+07:00","會安印象秀"],
+
+["2027-01-21T11:30:00+07:00","退房前往峴港"],
+
+["2027-01-21T14:30:00+07:00","購物、下午茶與按摩"],
+
+["2027-01-22T10:00:00+07:00","按摩 SPA"],
+
+["2027-01-23T07:30:00+07:00","前往峴港機場"],
+
+["2027-01-23T10:25:00+07:00","搭乘 CI0788 回台灣"]
+
+];
+
+function tick(){
+
+const now=Date.now();
+
+let next=events.find(e=>new Date(e[0]).getTime()>now);
+
+if(!next){
+
+document.getElementById("countTitle").textContent="旅程圓滿結束 ♡";
+
+document.getElementById("next").textContent="期待下一次旅行！";
+
+["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");
+
+return;
+
+}
+
+const ms=new Date(next[0]).getTime()-now;
+
+const s=Math.floor(ms/1000);
+
+document.getElementById("days").textContent=Math.floor(s/86400);
+
+document.getElementById("hours").textContent=String(Math.floor(s%86400/3600)).padStart(2,"0");
+
+document.getElementById("minutes").textContent=String(Math.floor(s%3600/60)).padStart(2,"0");
+
+document.getElementById("seconds").textContent=String(s%60).padStart(2,"0");
+
+document.getElementById("countTitle").textContent="距離下一個行程";
+
+document.getElementById("next").textContent=next[1];
+
+}
+
+tick();
+
+setInterval(tick,1000);
+
+</script>
+
+</body>
+
+</html>
