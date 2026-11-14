@@ -1,327 +1,59 @@
-<!doctype html>
-
-<html lang="zh-Hant">
-
-<head>
-
-<meta charset="utf-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>2027 峴港・會安旅行手冊</title>
-
-<style>
-
-:root{--bg:#f5f0e6;--paper:#fffdf7;--ink:#3c4038;--muted:#807e73;--line:#e8dece;--accent:#ad6545;--sage:#647b6b}
-
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 -apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}
-
-header{padding:38px 22px 28px;background:linear-gradient(135deg,#327d86,#a9b9a1 55%,#e9c9a0);color:white}
-
-header h1{font-size:32px;line-height:1.3;margin:7px 0}header p{margin:4px 0}
-
-nav{position:sticky;top:0;z-index:3;display:flex;gap:7px;overflow:auto;padding:12px;background:var(--bg)}
-
-nav button,.filter button{white-space:nowrap;border:1px solid var(--line);border-radius:22px;padding:7px 13px;background:var(--paper);color:var(--ink);font:inherit}
-
-nav button.active,.filter button.active{background:var(--accent);color:white}
-
-main{max-width:850px;margin:auto;padding:15px 14px 70px}
-
-section{display:none}section.active{display:block}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:17px;margin:0 0 14px}
-
-h2{font-size:20px;margin:0 0 10px}h3{font-size:16px;margin:13px 0 5px}.muted,small{color:var(--muted)}
-
-.tag{display:inline-block;background:#f2e8d7;border-radius:20px;padding:2px 9px;font-size:12px;color:#795b46}
-
-a{color:var(--sage)}.btn{display:inline-block;background:var(--sage);color:white;text-decoration:none;border:0;border-radius:9px;padding:8px 12px;margin:4px 4px 4px 0;font:inherit}
-
-.count{display:flex;gap:8px;margin:12px 0}.count div{flex:1;text-align:center;background:#f8eedb;border-radius:10px;padding:8px}.count b{display:block;font-size:24px;color:var(--accent)}
-
-.timeline{border-left:2px solid #e8d4bf;margin:8px 0 8px 8px;padding-left:14px}.event{padding:7px 0;border-bottom:1px dashed var(--line)}.event b{color:var(--accent);margin-right:8px}
-
-.room-table{width:100%;border-collapse:collapse}.room-table td,.room-table th{padding:7px 5px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.room-table input{width:100%;min-width:82px;padding:7px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);font:inherit}
-
-.scroll{overflow:auto}.filter{display:flex;gap:6px;overflow:auto;padding:4px 0 10px}.place{border-top:1px solid var(--line);padding:12px 0}.place:first-child{border:0}.food{background:#f5e7d4;border-radius:9px;padding:8px 10px;font-size:14px}.hide{display:none}
-
-input,select,textarea{max-width:100%;padding:8px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);font:inherit}
-
-@media(max-width:520px){header h1{font-size:27px}.card{padding:14px}.room-table{font-size:13px}}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-  <small>VIETNAM · FAMILY TRAVEL JOURNAL</small>
-
-  <h1>峴港・會安<br>慢旅行</h1>
-
-  <p>2027/1/18–1/23｜六天五夜｜16位家人</p>
-
-</header>
-
-<nav id="nav">
-
-  <button class="active" data-page="home">關注</button><button data-page="plan">行程</button>
-
-  <button data-page="hotel">住宿・房間</button><button data-page="places">收藏店家</button>
-
-  <button data-page="ledger">旅費分帳</button>
-
-</nav>
-
-<main>
-
-<section id="home" class="active">
-
-  <div class="card">
-
-    <small>距離出發倒數</small>
-
-    <div class="count"><div><b id="days">—</b>天</div><div><b id="hours">—</b>時</div><div><b id="mins">—</b>分</div></div>
-
-    <h2>峴港・會安家族旅行</h2><p>行程時間可能依天氣、交通及現場狀況調整。</p>
-
-  </div>
-
-  <div class="card"><h2>住宿路線</h2><p>1/18–1/20 南會安 Vinpearl → 1/20–1/21 會安 Son Hoi An → 1/21–1/23 峴港 HAIAN Beach。</p></div>
-
-</section>
-
-<section id="plan">
-
-  <div class="card"><h2>六天行程</h2>
-
-    <details open><summary><b>1/18（一）抵達峴港</b></summary><div class="timeline">
-
-      <div class="event"><b>16:25</b>CI0789 抵達峴港機場</div><div class="event"><b>17:40</b>機場換匯</div>
-
-      <div class="event"><b>18:00</b>預計搭飯店接駁（16人座位與行李待確認）</div><div class="event"><b>20:00</b>Vinpearl 飯店晚餐</div>
-
-    </div></details>
-
-    <details><summary><b>1/19（二）珍珠島與會安古鎮</b></summary><div class="timeline">
-
-      <div class="event"><b>09:30</b>VinWonders Nam Hội An</div><div class="event"><b>12:00</b>園區午餐或回飯店用餐</div>
-
-      <div class="event"><b>16:30</b>包車前往會安古鎮</div><div class="event"><b>18:30</b>Morning Glory Signature 晚餐</div>
-
-    </div></details>
-
-    <details><summary><b>1/20（三）椰子船、印象秀</b></summary><div class="timeline">
-
-      <div class="event"><b>12:00</b>退房前往 Son Hoi An</div><div class="event"><b>14:30</b>Hanh Coconut 椰子船</div>
-
-      <div class="event"><b>18:30</b>Nón Lá 餐廳晚餐</div><div class="event"><b>20:00</b>會安印象秀</div>
-
-    </div></details>
-
-    <details><summary><b>1/21（四）會安 → 峴港</b></summary><div class="timeline">
-
-      <div class="event"><b>11:30</b>退房、包車前往 HAIAN Beach</div><div class="event"><b>13:00</b>Bếp Cuốn 午餐候選</div>
-
-      <div class="event"><b>下午</b>美溪海灘、購物或按摩</div>
-
-    </div></details>
-
-    <details><summary><b>1/22（五）峴港自由活動</b></summary><div class="timeline">
-
-      <div class="event"><b>上午</b>按摩／洗頭 SPA</div><div class="event"><b>下午</b>咖啡與自由活動</div><div class="event"><b>晚上</b>海鮮或越南菜晚餐</div>
-
-    </div></details>
-
-    <details><summary><b>1/23（六）返回台灣</b></summary><div class="timeline">
-
-      <div class="event"><b>07:30</b>預計包車前往機場</div><div class="event"><b>10:25</b>CI0788 峴港起飛</div><div class="event"><b>14:10</b>抵達桃園</div>
-
-    </div></details>
-
-  </div>
-
-</section>
-
-<section id="hotel">
-
-  <div class="card"><h2>住宿資料</h2>
-
-    <p><b>1/18–1/20｜Vinpearl Resort & Golf Nam Hội An</b><br>16位、8間房。</p>
-
-    <p><b>1/20–1/21｜Son Hoi An Boutique Hotel & Spa</b><br>住一晚。</p>
-
-    <p><b>1/21–1/23｜HAIAN Beach Hotel & Spa</b><br>8間：高級雙床房4間、高級特大床房3間、海濱鑽石套房1間。</p>
-
-  </div>
-
-  <div class="card"><h2>房間分配表</h2><p class="muted">姓名可直接修改，資料會存在目前這台裝置的瀏覽器。</p><div id="rooms"></div></div>
-
-</section>
-
-<section id="places">
-
-  <div class="card"><h2>收藏店家</h2><div class="filter" id="filters"></div><div id="placeList"></div></div>
-
-</section>
-
-<section id="ledger">
-
-  <div class="card"><h2>共同旅費・平均分帳</h2>
-
-    <label>旅伴名單（每行一人）<textarea id="members" rows="4"></textarea></label>
-
-    <label>匯率：1 TWD = <input id="rate" type="number" value="800"> VND</label>
-
-    <button class="btn" onclick="saveSettings()">儲存名單與匯率</button>
-
-  </div>
-
-  <div class="card"><h2>新增支出</h2>
-
-    <form id="expenseForm">
-
-      <label>日期 <input id="expenseDate" type="date" value="2027-01-18" required></label>
-
-      <label>項目 <input id="expenseTitle" placeholder="例如：晚餐" required></label>
-
-      <label>金額 <input id="expenseAmount" type="number" min="1" required></label>
-
-      <label>幣別 <select id="currency"><option>VND</option><option>TWD</option></select></label>
-
-      <label>付款人 <select id="payer"></select></label>
-
-      <button class="btn">加入支出</button>
-
-    </form>
-
-  </div>
-
-  <div class="card"><h2>帳目與備份</h2><div id="records"></div>
-
-    <button class="btn" onclick="backup()">匯出 JSON 備份</button>
-
-    <button class="btn" onclick="exportCSV()">匯出 CSV</button>
-
-    <label>匯入 JSON 備份 <input type="file" id="importFile" accept=".json"></label>
-
-  </div>
-
-</section>
-
-</main>
-
-<script>
-
-const peopleDefault=Array.from({length:16},(_,i)=>'旅伴'+String(i+1).padStart(2,'0'));
-
-const groups=[
-
- {hotel:'Vinpearl Resort & Golf Nam Hội An',dates:'1/18入住–1/20退房｜2晚',rooms:8,per:2},
-
- {hotel:'Son Hoi An Boutique Hotel & Spa',dates:'1/20入住–1/21退房｜1晚',rooms:4,per:4},
-
- {hotel:'HAIAN Beach Hotel & Spa',dates:'1/21入住–1/23退房｜2晚',rooms:8,per:2}
-
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4ecdc"><title>2027 峴港・會安｜家族旅行手冊</title><style>
+:root{--bg:#f5f0e6;--paper:#fffdf7;--ink:#3c4038;--muted:#807e73;--line:#e8dece;--accent:#ad6545;--soft:#f5e7d4;--sage:#647b6b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}a{color:var(--sage)}button{font:inherit;cursor:pointer}header{height:310px;position:relative;display:flex;align-items:end;padding:24px 22px;background:linear-gradient(180deg,#1c4b52aa,#213e3e99),linear-gradient(135deg,#327d86,#a9b9a1 50%,#e9c9a0);color:#fff;overflow:hidden}header:after{content:"";position:absolute;right:-35px;top:35px;width:220px;height:220px;border:2px solid #ffffff30;border-radius:50%;box-shadow:0 0 0 25px #ffffff0b,0 0 0 55px #ffffff0a}header>div{z-index:1}.eyebrow{font-size:11px;letter-spacing:3px}h1{font-size:34px;line-height:1.3;margin:8px 0}header p{margin:5px 0}main{max-width:820px;margin:auto;padding:18px 14px 90px}.tabs{display:flex;overflow:auto;gap:8px;padding:13px 14px;background:var(--bg);position:sticky;top:0;z-index:10;scrollbar-width:none}.tabs button{white-space:nowrap;border:1px solid #e6d8c1;background:#fbf6e8;border-radius:30px;padding:7px 17px;color:#716c60}.tabs button.active{background:var(--accent);color:white;border-color:var(--accent)}section.tab{display:none}section.tab.active{display:block}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:19px;margin:0 0 16px;box-shadow:0 4px 20px #42331b08}h2{font-size:20px;margin:0 0 14px}h3{font-size:17px;margin:14px 0 5px}.section-label{font-weight:700;font-size:19px;letter-spacing:2px;margin:24px 3px 12px}.section-label span{display:inline-grid;place-items:center;width:29px;height:29px;background:var(--accent);color:#fff;border-radius:50%;font-size:13px;margin-right:8px}.muted,small{color:var(--muted)}.tag{display:inline-block;background:#f2e8d7;border-radius:20px;padding:2px 9px;font-size:12px;color:#93644d}.tag.ok{background:#e4eee3;color:#476d55}.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}.num{background:#f8eedb;border:1px dashed #e6d6b8;text-align:center;border-radius:12px;padding:8px 0;color:var(--accent)}.num strong{display:block;font-size:31px;line-height:1.3;font-weight:500;font-variant-numeric:tabular-nums}.num small{display:block}.btn{display:inline-block;border:0;border-radius:11px;padding:9px 14px;background:var(--sage);color:white;text-decoration:none;font-weight:600;margin:5px 6px 5px 0}.btn.secondary{background:#f1e6d6;color:#70543f}.timeline{border-left:2px solid #e8d4bf;margin-left:42px}.event{position:relative;padding:9px 0 13px 17px;border-bottom:1px dashed #e8e0d4}.event:before{content:"";position:absolute;left:-6px;top:17px;background:var(--accent);width:10px;height:10px;border-radius:50%}.event .clock{position:absolute;right:calc(100% + 14px);width:53px;text-align:right;color:var(--accent);font-size:13px;font-weight:700}.event b{font-weight:600}.event p{margin:2px 0;font-size:13px;color:var(--muted)}details{border-top:1px solid var(--line);padding:11px 0}summary{cursor:pointer;font-weight:650}summary::marker{color:var(--accent)}.place{padding:13px 0;border-top:1px solid var(--line)}.place:first-child{border-top:0}.place strong{font-size:16px}.place p{margin:3px 0}.place a{font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mini{background:#faf5eb;padding:12px;border-radius:12px}.mapbox{background:#f7f0e3;border-radius:16px;padding:9px}.mapbox svg{width:100%;height:auto;display:block}.legend{font-size:12px;color:var(--muted);margin:8px 3px}.notice{border-left:4px solid #bb7853;padding:8px 12px;background:#fbf0e3;border-radius:6px;margin:10px 0}.footer{text-align:center;font-size:12px;color:var(--muted);padding:20px}.night{--bg:#202b2a;--paper:#2d3835;--ink:#f0ebde;--muted:#b4b9ae;--line:#48524a;--soft:#3b443e;--sage:#839d88}.night .tabs{background:var(--bg)}.night .tabs button,.night .mini,.night .mapbox,.night .num{background:#3c443e;color:#eee}.night .notice{background:#4a3c34}.night .tag{background:#4c463c;color:#ead5b5}.night .btn.secondary{background:#4c463c;color:#f4e9d6}@media(max-width:420px){header{height:265px}h1{font-size:29px}.card{padding:16px}.num strong{font-size:26px}.grid{grid-template-columns:1fr 1fr}}
+</style><style>.expense-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.expense-grid label,.card label{display:block;font-weight:650}.expense-grid input,.expense-grid select,.expense-grid textarea,.card input[type=file]{width:100%;min-width:0;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:10px;border-radius:9px;font:inherit}.member-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.member-grid label{font-size:13px;font-weight:400}.expense-row{border-bottom:1px solid var(--line);padding:10px 0}.expense-row:last-child{border:0}.expense-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.expense-stats>div{background:var(--soft);border-radius:12px;padding:12px}.expense-stats b{font-size:19px}.expense-grid textarea{resize:vertical}.room-table{width:100%;border-collapse:collapse;font-size:14px}.room-table th,.room-table td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.room-table th{color:var(--muted);font-weight:600}.room-table input{width:100%;min-width:90px;padding:7px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit}.room-scroll{overflow-x:auto}.spot-filters{display:flex;gap:7px;overflow:auto;padding:5px 0 12px}.spot-filters button{white-space:nowrap;border:1px solid var(--line);border-radius:18px;padding:6px 12px;background:var(--paper);color:var(--ink)}.spot-filters button.active{background:var(--sage);border-color:var(--sage);color:#fff}.spot-card[hidden]{display:none}.food-tip{font-size:13px;background:var(--soft);border-radius:10px;padding:9px 11px;margin-top:8px}.room-card{overflow:hidden}@media(max-width:520px){.room-table{font-size:12px}.room-table th,.room-table td{padding:6px 4px}}@media(max-width:520px){.expense-grid{grid-template-columns:1fr}.member-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}</style></head><body><header><div><div class="eyebrow">VIETNAM · FAMILY TRAVEL JOURNAL</div><h1>峴港・會安<br>慢旅行</h1><p>2027.01.18 — 01.23 ｜ 六天五夜 ｜ 16位家人</p><p>海風・古鎮・咖啡・美食・按摩</p></div></header><nav class="tabs" id="tabs"><button class="active" data-tab="home">關注</button><button data-tab="overview">總覽</button><button data-tab="bookings">預訂</button><button data-tab="days">逐日</button><button data-tab="spots">收藏</button><button data-tab="ready">待辦・貼士</button><button data-tab="expenses">💰 旅費分帳</button></nav><main>
+<section class="tab active" id="home"><div class="section-label"><span>壹</span>此刻關注</div><div class="card"><small>依越南當地時間 GMT+7 計算</small><h2 id="nextTitle">正在整理下一個行程…</h2><div id="nextDesc" class="muted"></div><div class="count"><div class="num"><strong id="dd">00</strong><small>天</small></div><div class="num"><strong id="hh">00</strong><small>時</small></div><div class="num"><strong id="mm">00</strong><small>分</small></div><div class="num"><strong id="ss">00</strong><small>秒</small></div></div><a class="btn" id="nextNav" target="_blank" rel="noopener" style="display:none">📍 怎麼去・Google Maps</a><p class="muted" style="font-size:12px">倒數以排定時間為準，非即時交通預測；行程可能依現場調整。</p></div><div class="section-label"><span>貳</span>今天去哪裡</div><div class="card"><div id="todayEvents"></div><button class="btn secondary" onclick="switchTab('days')">查看六天完整行程</button></div><div class="section-label"><span>參</span>旅行地圖</div><div class="card"><div id="mapHere"></div></div></section>
+<section class="tab" id="overview"><div class="section-label"><span>壹</span>六天路線總覽</div><div class="card"><div id="mapHere2"></div><div class="notice">地圖是依地理方位繪製的相對位置示意圖，並非道路比例尺地圖；精確導航請點 Google Maps。</div></div><div class="card"><h2>住宿與行程節奏</h2><div id="overviewList"></div></div></section>
+<section class="tab" id="bookings"><div class="section-label"><span>壹</span>已知航班</div><div class="card"><h2>✈️ 中華航空｜桃園 ⇄ 峴港</h2><div class="mini"><b>1/18（一） CI0789</b><br>14:30 桃園 TPE → 16:25 峴港 DAD <span class="tag ok">機票截圖</span></div><div class="mini" style="margin-top:10px"><b>1/23（六） CI0788</b><br>10:25 峴港 DAD → 14:10 桃園 TPE <span class="tag ok">機票截圖</span></div><p class="muted">航班時間以已提供的機票截圖為準，起飛前仍應核對航空公司通知。</p></div><div class="section-label"><span>貳</span>住宿</div><div id="hotelList"></div><div class="section-label"><span>參</span>房間分配表</div><div id="roomList"></div><div class="section-label"><span>肆</span>接送與門票</div><div class="card"><p><b>1/18 飯店接駁：</b>18:00預計從機場出發；免費資格、16人車位與行李容量仍須向飯店確認。</p><p><b>1/19 VinWonders：</b>門票與接送車安排待確認。</p><p><b>1/20 椰子船、會安印象秀：</b>票券、16人包車與接送點待確認。</p><p><b>1/21–1/23 交通：</b>會安→峴港、機場送機安排待確認。</p><p class="muted">不公開訂單編號、護照資料、個人電話或電子郵件。</p></div></section>
+<section class="tab" id="days"><div class="section-label"><span>壹</span>每日詳細行程</div><div id="dayList"></div></section>
+<section class="tab" id="spots"><div class="section-label"><span>壹</span>姊妹們收藏的打卡地</div><div class="card"><p>收藏自你提供的 Google 地圖截圖；尚未等於預訂。下方是依行程區域初步安排的候選店家，實際營業時間、位置、評價與16人接待能力請出發前確認。</p><div class="spot-filters" id="spotFilters" aria-label="收藏店家分類"></div><div id="spotList"></div></div></section>
+<section class="tab" id="ready"><div class="section-label"><span>壹</span>出發前待辦</div><div class="card"><div id="todoList"></div></div><div class="section-label"><span>貳</span>行李清單</div><div class="card"><p class="muted">以下為共同參考清單，非每人同步勾選紀錄。</p><div id="packList"></div></div><div class="section-label"><span>參</span>越南旅行貼士</div><div class="card"><div class="place"><b>🌤️ 一月天氣</b><p>峴港與會安一月可能偏涼、下雨或有風。海邊拍照、游泳前先看當天天氣及海況。</p></div><div class="place"><b>💵 現金與換匯</b><p>準備少量越南盾；機場換匯先確認匯率及手續費，大額可到市區比較。</p></div><div class="place"><b>🚐 16人交通</b><p>車輛需確認座位數、行李空間、兒童或長者需求。導航預估時間不等於實際包車時間。</p></div><div class="place"><b>📶 網路與離線</b><p>本頁文字、示意地圖及倒數計時不需要網路；Google Maps、外部介紹頁及導航需要連線。</p></div><div class="place"><b>🔐 公開網站安全</b><p>不放個人聯絡方式、訂單確認碼、證件號碼及房號。</p></div></div></section><section class="tab" id="expenses"><div class="section-label"><span>壹</span>共同旅費・平均分帳</div><div class="card"><p class="muted">僅儲存在這台裝置的瀏覽器；離線可記帳。換手機、清除瀏覽資料或使用無痕模式可能遺失，請定期匯出 JSON 備份。</p><div class="expense-grid"><label>旅伴名單（每行一人，預設16人）<textarea id="memberNames" rows="5" placeholder="旅伴01"></textarea></label><div><label>換算匯率：1 TWD = 幾 VND<input id="exchangeRate" type="number" min="1" step="1" value="800"></label><small>請依實際換匯匯率自行設定；不是即時匯率。</small><button class="btn secondary" type="button" onclick="saveExpenseSettings()">儲存名單與匯率</button></div></div></div><div class="card"><h2>新增支出</h2><form id="expenseForm"><div class="expense-grid"><label>日期<input id="exDate" type="date" value="2027-01-18" required></label><label>分類<select id="exCategory"><option>餐飲</option><option>交通</option><option>門票</option><option>住宿</option><option>按摩</option><option>購物</option><option>其他</option></select></label><label>項目<input id="exTitle" required placeholder="例如：16人晚餐"></label><label>金額<input id="exAmount" type="number" min="0.01" step="0.01" required placeholder="例如 1600000"></label><label>幣別<select id="exCurrency"><option value="VND">越南盾 VND</option><option value="TWD">新台幣 TWD</option></select></label><label>誰先墊錢<select id="exPayer"></select></label></div><p><b>由哪些人分攤？</b> <button type="button" class="btn secondary" onclick="toggleAllMembers(true)">全選16人</button> <button type="button" class="btn secondary" onclick="toggleAllMembers(false)">清空</button></p><div id="exParticipants" class="member-grid"></div><button class="btn" type="submit">＋ 儲存這筆支出</button></form></div><div class="card"><h2>分帳統計</h2><div id="expenseSummary"></div></div><div class="card"><h2>支出明細</h2><div id="expenseRecords"></div></div><div class="card"><h2>備份與匯出</h2><button class="btn secondary" onclick="exportExpenseJSON()">⬇ JSON完整備份</button> <button class="btn secondary" onclick="exportExpenseCSV()">⬇ CSV明細</button><p><label>匯入之前的 JSON 備份<input type="file" id="expenseImport" accept=".json,application/json"></label></p><p class="muted">匯入會取代目前這台裝置的旅費帳本，請先備份。CSV可用試算表開啟，JSON可還原帳本。</p></div></section><div class="footer">2027 DANANG · HOI AN ｜ FAMILY TRAVEL JOURNAL</div></main><script>
+const gmap=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);const gdir=q=>'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q)+'&travelmode=driving';const hotels=[{name:'Vinpearl Resort & Golf Nam Hội An',dates:'1/18 入住 → 1/20 退房｜2晚',detail:'16位成人、8間房；入住15:00後、退房12:00前',addr:'Vo Chi Cong Street, Thang An Commune, Da Nang City, Vietnam',status:'已提供訂房截圖'},{name:'Son Hoi An Boutique Hotel & Spa',dates:'1/20 入住 → 1/21 退房｜1晚',detail:'入住14:00後、退房12:00前；12:30到達先寄放行李',addr:'114/4 Đào Duy Từ, Hội An, Vietnam',status:'已提供訂房截圖'},{name:'HAIAN Beach Hotel & Spa',dates:'1/21 入住 → 1/23 退房｜2晚',detail:'8間：高級雙床房4間、高級特大床房3間、海濱鑽石套房1間；共2晚',addr:'278 Võ Nguyên Giáp, Đà Nẵng, Vietnam',status:'已指定住宿'}];
+const days=[{date:'2027-01-18',title:'D1｜1/18（一）抵達峴港',stay:0,events:[['16:25','CI0789 抵達峴港機場','Da Nang International Airport','機票截圖顯示16:25；原行程16:35已修正'],['17:40','機場換匯','Da Nang International Airport','預估時間'],['18:00','搭飯店接駁車','Da Nang International Airport','免費接駁及16人乘車資格待確認'],['19:30','抵達 Vinpearl 飯店、辦理入住',hotels[0].name,'接駁車程與抵達時間待確認'],['20:00','飯店晚餐',hotels[0].name,'餐廳營業及16人座位待確認']]},{date:'2027-01-19',title:'D2｜1/19（二）珍珠島與古鎮',stay:0,events:[['08:00','飯店早餐',hotels[0].name,''],['09:30','出發會安珍珠島樂園','VinWonders Nam Hoi An','門票及交通待確認'],['12:00','園區午餐或回飯店用餐','VinWonders Nam Hoi An','兩種午餐選項'],['14:00','繼續遊玩或回飯店休息','VinWonders Nam Hoi An','自由分組'],['16:30','包車前往會安古鎮','Hoi An Ancient Town','16人車輛待確認'],['18:30','Morning Glory Signature 晚餐','Morning Glory Signature Hoi An','16人建議提前訂位'],['19:30','會安古鎮夜遊拍照','Hoi An Ancient Town',''],['21:00','包車返回飯店',hotels[0].name,'接送待確認']]},{date:'2027-01-20',title:'D3｜1/20（三）椰子船與印象秀',stay:1,events:[['08:00','飯店早餐',hotels[0].name,''],['09:00','泳池、沙灘自由活動',hotels[0].name,''],['12:00','退房前往會安','Son Hoi An Boutique Hotel & Spa',''],['12:30','抵達 Son Hoi An、寄放行李',hotels[1].name,'飯店14:00後才能入住'],['13:00','會安法國麵包午餐','Hoi An banh mi','店家待選'],['14:30','Hanh Coconut 椰子船','Hanh Coconut Hoi An','建議提前確認16人預約'],['18:00','包車前往會安印象樂園','Hoi An Memories Land','交通與抵達時間待確認'],['18:30','Nón Lá 餐廳晚餐','Nón Lá Restaurant Hoi An Memories Land','16人座位與營業待確認'],['20:00','會安印象秀','Hoi An Memories Show','門票、場次待核對'],['21:00','包車回飯店',hotels[1].name,'表演散場及集合時間需預留']]},{date:'2027-01-21',title:'D4｜1/21（四）古鎮 → 美溪海灘',stay:2,events:[['08:00','飯店早餐',hotels[1].name,''],['10:00','腳踏車古鎮／游泳／三輪車','Hoi An Ancient Town','自由分組，注意11:30退房'],['11:30','退房，包車前往峴港','HAIAN Beach Hotel & Spa',''],['12:30','抵達 HAIAN 飯店、寄放行李',hotels[2].name,'若未到入住時間先寄放行李'],['13:00','峴港午餐（Bếp Cuốn 候選）','Bếp Cuốn Đà Nẵng','16人訂位待確認'],['14:30','下午茶、購物、按摩','My Khe Beach Da Nang','Nguon Spa 等候選'],['18:00','晚餐待安排','My Khe Beach Da Nang',''],['20:00','美溪海灘散步或酒吧','My Khe Beach Da Nang','依海況天氣調整']]},{date:'2027-01-22',title:'D5｜1/22（五）美食與按摩自由日',stay:2,events:[['08:00','飯店早餐',hotels[2].name,''],['10:00','按摩／洗頭 SPA','Trees Spa Da Nang','候選：Trees Spa、Five Senses 等，需確認分店地點'],['12:00','午餐待選','Da Nang',''],['14:00','咖啡廳下午茶','Da Nang','Tân Coffee 等候選'],['17:00','晚餐待選','Da Nang','海鮮或越南菜候選']]},{date:'2027-01-23',title:'D6｜1/23（六）返回台灣',stay:null,events:[['06:30','早餐、整理行李',hotels[2].name,'早餐供應時間需確認'],['07:30','包車出發前往峴港機場',hotels[2].name,'16人送機待確認'],['08:00','抵達機場、辦理登機','Da Nang International Airport',''],['10:25','CI0788 峴港起飛','Da Nang International Airport','機票截圖；原行程10:45已修正'],['14:10','抵達桃園機場','Taiwan Taoyuan International Airport','台灣時間 GMT+8']]}];
+const spots=[
+{name:'Morning Glory Signature',category:'餐廳',slot:'1/19 晚餐｜候選',desc:'會安料理代表店，古鎮河畔用餐；16人建議預約。',feature:'以會安與中部越南家常菜為主，適合多人分食。',must:'高樓麵、白玫瑰蒸餃、會安雞飯；可加點炸雲吞。'},
+{name:'Nón Lá Restaurant｜會安印象樂園',category:'餐廳',slot:'1/20 晚餐｜園區內',desc:'竹編斗笠造型餐廳，位於會安印象樂園內。',feature:'提供越南南北中料理，適合看秀前就近用餐。',must:'會安雞飯、白玫瑰、會安高樓麵；點餐前確認當日供應。'},
+{name:'Bếp Cuốn Đà Nẵng',category:'餐廳',slot:'1/21 午餐候選',desc:'越南家常菜與捲餅；16人建議訂位。',feature:'主打越南捲物、小吃與中部料理，可多人分享。',must:'店家拼盤 Mẹt Bếp Cuốn、越南煎餅、鮮春捲。'},
+{name:'Madam Khánh – The Bánh Mì Queen',category:'餐廳',slot:'會安古鎮小吃備選',desc:'會安知名家庭麵包店，適合簡單午餐或外帶。',feature:'招牌越南法國麵包，方便分組採買。',must:'綜合口味法國麵包或烤豬肉法國麵包；辣醬可另加。'},
+{name:'Nhà hàng hải sản A Rồi',category:'餐廳',slot:'1/21 或 1/22 晚餐候選',desc:'峴港海鮮餐廳候選，店址與16人訂位待確認。',feature:'適合多人點海鮮共享，先看當日海鮮與每公斤價格。',must:'依當日供應挑蝦、貝類或烤魚；下單前確認重量與烹調費。'},
+{name:'Chillax Eatery & Hangout',category:'餐廳',slot:'會安備選',desc:'會安稻田一帶景觀餐廳；時間足夠再安排。',feature:'環境放鬆、適合拍照歇腳，距古鎮需另安排交通。',must:'依當日菜單點餐，先確認營業時間及16人接待。'},
+{name:'Bếp Hến restaurant',category:'餐廳',slot:'收藏備選',desc:'越南地方料理候選，交通與營業資訊待確認。',feature:'可作為探索在地菜色的備選店家。',must:'查看當日菜單再點招牌菜。'},
+{name:'Tân Coffee',category:'咖啡',slot:'1/22 下午候選',desc:'咖啡與拍照休息候選；分店位置待核對。',feature:'安排在自由活動日補充咖啡與甜點。',must:'越南冰咖啡或椰子咖啡（依分店供應）。'},
+{name:'Nguon Spa Da Nang – Nguồn Hoàng Kế Viêm',category:'SPA／按摩',slot:'1/21 下午候選',desc:'美溪一帶按摩候選，分店與16人接待待確認。',feature:'適合海灘周邊放鬆，可詢問分批預約。',must:'依個人需求選按摩時長與項目。'},
+{name:'Five Senses Spa',category:'SPA／按摩',slot:'1/21 會安自由活動候選',desc:'古鎮按摩候選；時間不足可不安排。',feature:'可與古鎮散步搭配，先確認實際店址。',must:'足部按摩或全身按摩，依當日價目選擇。'},
+{name:'Trees Spa Da Nang',category:'SPA／按摩',slot:'1/22 上午候選',desc:'按摩與洗頭候選，詢問16人是否可分批。',feature:'適合自由活動日安排保養與休息。',must:'洗頭或按摩療程，需先確認預約名額。'},
+{name:'Recharged Da Nang – Sauna, Ice Bath, Spa and Co Working',category:'SPA／按摩',slot:'1/22 自由活動候選',desc:'桑拿、冰浴與SPA體驗候選。',feature:'適合想嘗試桑拿或冷熱水療的成員。',must:'桑拿／冰浴體驗，預約前確認開放時段。'},
+{name:'Ylang Ylang Hoiana Spa',category:'SPA／按摩',slot:'收藏備選',desc:'位於 Hoiana 區域，並非 Vinpearl 飯店內。',feature:'偏度假型SPA，交通需另行安排。',must:'依療程表選擇，先確認交通和預約。'}
 ];
+const defaultRoomPeople=Array.from({length:16},(_,i)=>'旅伴'+String(i+1).padStart(2,'0'));let roomPeople=defaultRoomPeople.slice();try{const saved=JSON.parse(localStorage.getItem('danang2027-room-people-v1')||'null');if(Array.isArray(saved)&&saved.length===16)roomPeople=saved}catch(e){}
+const roomGroups=[{dates:'1/18入住–1/20退房｜2晚',hotel:'Vinpearl Resort & Golf Nam Hội An',count:8,per:2},{dates:'1/20入住–1/21退房｜1晚',hotel:'Son Hoi An Boutique Hotel & Spa',count:4,per:4},{dates:'1/21入住–1/23退房｜2晚',hotel:'HAIAN Beach Hotel & Spa',count:8,per:2}];
+function renderRooms(){document.getElementById('roomList').innerHTML=roomGroups.map(g=>{let rows=Array.from({length:g.count},(_,r)=>{let ids=Array.from({length:g.per},(_,j)=>g.per===2?r*2+j:r*4+j);return '<tr><td>房間 '+String(r+1).padStart(2,'0')+'</td><td>'+ids.map(i=>'<input aria-label="入住旅伴姓名" data-person-index="'+i+'" value="'+esc(roomPeople[i])+'">').join('')+'</td></tr>'}).join('');return '<div class="card room-card"><h2>🏨 '+esc(g.hotel)+'</h2><p><b>'+esc(g.dates)+'</b><br>'+g.count+'間 × 每間 '+g.per+'人 = 16人</p><div class="room-scroll"><table class="room-table"><thead><tr><th>房號</th><th>入住旅伴（可直接改姓名）</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>'}).join('');document.querySelectorAll('[data-person-index]').forEach(input=>input.addEventListener('input',e=>{roomPeople[Number(e.target.dataset.personIndex)]=e.target.value;try{localStorage.setItem('danang2027-room-people-v1',JSON.stringify(roomPeople))}catch(err){}}))}
+function renderSpotFilters(){const cats=['全部',...new Set(spots.map(s=>s.category))];const box=document.getElementById('spotFilters');box.innerHTML=cats.map((c,i)=>'<button type="button" class="'+(i===0?'active':'')+'" data-filter="'+esc(c)+'">'+esc(c)+'</button>').join('');box.addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;box.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.spot-card').forEach(card=>card.hidden=b.dataset.filter!=='全部'&&card.dataset.category!==b.dataset.filter)})}
+const todos=['確認1/18免費接駁是否能載16人及行李','確認VinWonders 16人門票與往返交通','預訂1/19 Morning Glory Signature 16人晚餐','確認1/20椰子船16人預約與接送','確認會安印象秀1/20 20:00場次、票券與包車','確認1/21 HAIAN 飯店入住時間與房間配置','安排1/21、1/22餐廳與按摩（必要時分組）','確認1/23 07:30送機車輛及飯店早餐時間','完成16人越南入境文件／電子簽證資格核對','確認護照效期、保險、行李規定'];const packing=['護照、機票與入境文件','手機、充電線、行動電源、網卡','越南盾、信用卡','薄外套、雨具、好走的鞋','泳衣、防曬、帽子','個人常備藥、暈車藥及過敏藥','個人盥洗用品、備用衣物'];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const link=(name,label='地圖導航')=>'<a href="'+gdir(name)+'" target="_blank" rel="noopener">📍 '+label+'</a>';const eventHTML=e=>'<div class="event"><span class="clock">'+esc(e[0])+'</span><b>'+esc(e[1])+'</b>'+(e[3]?'<p>'+esc(e[3])+'</p>':'')+(e[2]?'<p>'+link(e[2])+' · <a href="'+gmap(e[2])+'" target="_blank" rel="noopener">地點介紹</a></p>':'')+'</div>';
+const mapHTML=`<div class="mapbox"><svg viewBox="0 0 350 490" role="img" aria-label="峴港、會安及南會安相對位置示意地圖"><defs><pattern id="wave" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 12 Q6 6 12 12 T24 12" fill="none" stroke="#a6c9c9" stroke-width="1" opacity=".5"/></pattern></defs><rect width="350" height="490" rx="13" fill="#f7f0e3"/><path d="M230 0 H350 V490 H275 Q240 420 260 345 Q286 270 248 205 Q222 135 230 0" fill="#d7ebeb"/><path d="M230 0 H350 V490 H275 Q240 420 260 345 Q286 270 248 205 Q222 135 230 0" fill="url(#wave)"/><path d="M230 0 Q222 135 248 205 Q286 270 260 345 Q240 420 275 490" stroke="#c8b59a" stroke-width="3" fill="none"/><path d="M128 45 Q162 95 171 142 T157 239 Q140 291 155 348 T166 440" stroke="#aebaa5" stroke-width="2" stroke-dasharray="4 7" fill="none"/><path d="M132 65 L183 150 L150 290 L166 420" stroke="#b47c61" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M132 65 L183 150" stroke="#b47c61" stroke-width="4"/><path d="M183 150 L150 290" stroke="#7d9478" stroke-width="4"/><path d="M150 290 L166 420" stroke="#b89a6e" stroke-width="4"/><g font-family="sans-serif" font-size="13" fill="#4b5146"><text x="16" y="30" font-size="11" fill="#847c70">北 ↑　位置示意・非比例尺</text><text x="281" y="245" fill="#5f8e98" transform="rotate(90 281 245)">南海 · South China Sea</text><circle cx="132" cy="65" r="8" fill="#b47c61" stroke="white" stroke-width="3"/><text x="24" y="60" font-weight="bold">峴港機場</text><circle cx="183" cy="150" r="8" fill="#b47c61" stroke="white" stroke-width="3"/><text x="194" y="145" font-weight="bold">美溪海灘</text><text x="194" y="163" font-size="11">HAIAN 飯店</text><circle cx="150" cy="290" r="8" fill="#7d9478" stroke="white" stroke-width="3"/><text x="35" y="278" font-weight="bold">會安古鎮</text><text x="35" y="295" font-size="11">Son Hoi An</text><text x="35" y="311" font-size="11">印象秀／椰子船</text><circle cx="166" cy="420" r="8" fill="#b89a6e" stroke="white" stroke-width="3"/><text x="18" y="408" font-weight="bold">南會安</text><text x="18" y="425" font-size="11">Vinpearl 飯店</text><text x="18" y="440" font-size="11">VinWonders 樂園</text></g></svg></div><p class="legend">🟤 D1／D6 峴港機場　🟢 D3／D4 會安　🟠 D2 南會安／古鎮；線條僅表示區域連結，非實際道路。</p><a class="btn secondary" href="${gmap('Da Nang Hoi An Vietnam')}" target="_blank" rel="noopener">開啟 Google Maps 真實地圖</a>`;
+function routeURL(d){let stops=d.events.filter(e=>e[2]).map(e=>e[2]);let unique=[...new Set(stops)];if(unique.length<2)return gdir(unique[0]||'Da Nang');let origin=unique.shift(),dest=unique.pop();return 'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(origin)+'&destination='+encodeURIComponent(dest)+'&waypoints='+encodeURIComponent(unique.slice(0,3).join('|'))+'&travelmode=driving'}
+function render(){document.getElementById('mapHere').innerHTML=mapHTML;document.getElementById('mapHere2').innerHTML=mapHTML;document.getElementById('overviewList').innerHTML=days.map((d,i)=>'<div class="place"><b>'+esc(d.title)+'</b><br><small>住宿：'+(d.stay===null?'返台':esc(hotels[d.stay].name))+'</small> · <a href="'+routeURL(d)+'" target="_blank" rel="noopener">當日多點導航</a></div>').join('');document.getElementById('hotelList').innerHTML=hotels.map(h=>'<div class="card"><h2>🏨 '+esc(h.name)+'</h2><span class="tag ok">'+esc(h.status)+'</span><p><b>'+esc(h.dates)+'</b></p><p>'+esc(h.detail)+'</p><p class="muted">'+esc(h.addr)+'</p><a class="btn secondary" href="'+gdir(h.name)+'" target="_blank" rel="noopener">Google Maps 導航</a></div>').join('');document.getElementById('dayList').innerHTML=days.map((d,i)=>'<div class="card"><details '+(i===0?'open':'')+'><summary>'+esc(d.title)+'<br><small>當晚：'+(d.stay===null?'返台':esc(hotels[d.stay].name))+'</small></summary><p><a class="btn secondary" href="'+routeURL(d)+'" target="_blank" rel="noopener">🧭 當日多點導航</a></p><details><summary>展開當日相對位置地圖</summary>'+mapHTML+'</details><div class="timeline">'+d.events.map(eventHTML).join('')+'</div></details></div>').join('');renderRooms();renderSpotFilters();document.getElementById('spotList').innerHTML=spots.map(s=>'<div class="place spot-card" data-category="'+esc(s.category)+'"><strong>'+esc(s.name)+'</strong> <span class="tag">'+esc(s.category)+'</span><br><span class="tag">'+esc(s.slot)+'</span><p>'+esc(s.desc)+'</p><p>'+esc(s.feature)+'</p><div class="food-tip"><b>推薦必點：</b>'+esc(s.must)+'</div><p><a href="'+gmap(s.name+' Vietnam')+'" target="_blank" rel="noopener">地點介紹與評論</a> · '+link(s.name+' Vietnam')+'</p></div>').join('');document.getElementById('todoList').innerHTML=todos.map((x,i)=>'<div class="place">'+(i+1)+'. '+esc(x)+' <span class="tag">待確認</span></div>').join('');document.getElementById('packList').innerHTML=packing.map(x=>'<div class="place">・'+esc(x)+'</div>').join('')}
+function switchTab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));scrollTo({top:265,behavior:'smooth'})}document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+const allEvents=days.flatMap(d=>d.events.map(e=>({e,date:d.date,ts:new Date(d.date+'T'+e[0]+':00+07:00').getTime()})));function tick(){let now=Date.now();let future=allEvents.find(x=>x.ts>now);let t=future?future.ts-now:0;document.getElementById('dd').textContent=String(Math.floor(t/86400000));document.getElementById('hh').textContent=String(Math.floor(t/3600000)%24).padStart(2,'0');document.getElementById('mm').textContent=String(Math.floor(t/60000)%60).padStart(2,'0');document.getElementById('ss').textContent=String(Math.floor(t/1000)%60).padStart(2,'0');document.getElementById('nextTitle').textContent=future?future.e[1]:'旅程已結束・期待下次出發';document.getElementById('nextDesc').textContent=future?future.date+'｜越南時間 '+future.e[0]+'｜'+(future.e[3]||'下一個排定行程'):'2027年1月18日至23日';let a=document.getElementById('nextNav');a.style.display=future&&future.e[2]?'inline-block':'none';if(future)a.href=gdir(future.e[2]);let vn=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Ho_Chi_Minh',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());let d=days.find(x=>x.date===vn)|| (now<allEvents[0].ts?days[0]:null);document.getElementById('todayEvents').innerHTML=d?'<h3>'+esc(d.title)+'</h3><div class="timeline">'+d.events.map(eventHTML).join('')+'</div><p><a class="btn secondary" href="'+routeURL(d)+'" target="_blank" rel="noopener">🧭 全日多點導航</a></p>':'<p>旅程尚未開始或已結束。請切換「逐日」查看六天行程。</p>'}render();tick();setInterval(tick,1000);function theme(){let hour=Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Ho_Chi_Minh',hour:'2-digit',hour12:false}).format(new Date()));document.body.classList.toggle('night',hour>=18||hour<6)}theme();setInterval(theme,60000);
 
-let roomNames=JSON.parse(localStorage.getItem('tripRoomNames')||'null')||peopleDefault.slice();
-
-function renderRooms(){
-
- document.getElementById('rooms').innerHTML=groups.map(g=>{
-
-  let rows=Array.from({length:g.rooms},(_,r)=>{
-
-   let ids=Array.from({length:g.per},(_,j)=>g.per===2?r*2+j:r*4+j);
-
-   return '<tr><td>房間 '+String(r+1).padStart(2,'0')+'</td><td>'+ids.map(i=>'<input data-person="'+i+'" value="'+esc(roomNames[i])+'">').join(' ')+'</td></tr>';
-
-  }).join('');
-
-  return '<div class="card"><h3>'+esc(g.hotel)+'</h3><p>'+esc(g.dates)+'｜'+g.rooms+'間 × 每間'+g.per+'人</p><div class="scroll"><table class="room-table"><tr><th>房號</th><th>入住旅伴</th></tr>'+rows+'</table></div></div>';
-
- }).join('');
-
- document.querySelectorAll('[data-person]').forEach(x=>x.oninput=()=>{roomNames[+x.dataset.person]=x.value;localStorage.setItem('tripRoomNames',JSON.stringify(roomNames))});
-
-}
-
-const places=[
-
- {n:'Morning Glory Signature',c:'餐廳',s:'1/19晚餐候選',f:'會安與中部越南料理，適合多人分食。',m:'高樓麵、白玫瑰蒸餃、會安雞飯；可加點炸雲吞。'},
-
- {n:'Nón Lá Restaurant｜會安印象樂園',c:'餐廳',s:'1/20晚餐',f:'竹編斗笠造型餐廳，位於印象樂園內，供應越南各地料理。',m:'會安雞飯、白玫瑰或高樓麵；依當日菜單點選。'},
-
- {n:'Bếp Cuốn Đà Nẵng',c:'餐廳',s:'1/21午餐候選',f:'越南捲物、小吃與中部料理，適合多人共享。',m:'店家拼盤 Mẹt Bếp Cuốn、越南煎餅、鮮春捲。'},
-
- {n:'Madam Khánh – The Bánh Mì Queen',c:'餐廳',s:'會安古鎮小吃備選',f:'會安家庭麵包店，適合簡單午餐或外帶。',m:'綜合口味或烤豬肉越南法國麵包。'},
-
- {n:'Nhà hàng hải sản A Rồi',c:'餐廳',s:'峴港晚餐候選',f:'海鮮餐廳候選；先確認位置、營業及每公斤價格。',m:'依當日供應挑蝦、貝類或烤魚，下單前確認重量與費用。'},
-
- {n:'Chillax Eatery & Hangout',c:'餐廳',s:'會安備選',f:'稻田一帶景觀餐廳，行程有空再前往。',m:'依當日菜單點餐，先確認營業與交通。'},
-
- {n:'Tân Coffee',c:'咖啡',s:'1/22下午候選',f:'咖啡休息候選，分店位置待核對。',m:'越南冰咖啡或椰子咖啡，依分店供應。'},
-
- {n:'Nguon Spa Da Nang',c:'SPA／按摩',s:'1/21下午候選',f:'美溪周邊按摩候選，可詢問分批預約。',m:'依個人需求選按摩項目與時長。'},
-
- {n:'Five Senses Spa',c:'SPA／按摩',s:'會安自由活動候選',f:'古鎮按摩候選，先確認分店位置。',m:'足部或全身按摩，依當日價目選擇。'},
-
- {n:'Trees Spa Da Nang',c:'SPA／按摩',s:'1/22上午候選',f:'按摩與洗頭候選，先確認16人名額。',m:'洗頭或按摩療程，需預約確認。'}
-
-];
-
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-
-function renderPlaces(){
-
- const cats=['全部',...new Set(places.map(x=>x.c))],f=document.getElementById('filters');
-
- f.innerHTML=cats.map((c,i)=>'<button class="'+(!i?'active':'')+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>').join('');
-
- f.onclick=e=>{if(!e.target.dataset.cat)return;f.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===e.target));document.querySelectorAll('.place-card').forEach(x=>x.classList.toggle('hide',e.target.dataset.cat!=='全部'&&x.dataset.cat!==e.target.dataset.cat))};
-
- document.getElementById('placeList').innerHTML=places.map(x=>'<article class="place place-card" data-cat="'+esc(x.c)+'"><b>'+esc(x.n)+'</b> <span class="tag">'+esc(x.c)+'</span><br><small>'+esc(x.s)+'</small><p>'+esc(x.f)+'</p><div class="food"><b>推薦：</b>'+esc(x.m)+'</div><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(x.n+' Vietnam')+'">Google Maps 地點與評論</a></p></article>').join('');
-
-}
-
-const key='tripExpenses';
-
-let data=JSON.parse(localStorage.getItem(key)||'null')||{members:peopleDefault,rate:800,records:[]};
-
-function save(){localStorage.setItem(key,JSON.stringify(data))}
-
-function renderLedger(){
-
- document.getElementById('members').value=data.members.join('\\n');document.getElementById('rate').value=data.rate;
-
- document.getElementById('payer').innerHTML=data.members.map((n,i)=>'<option value="'+i+'">'+esc(n)+'</option>').join('');
-
- document.getElementById('records').innerHTML=data.records.length?data.records.map(r=>'<div class="place"><b>'+esc(r.title)+'</b>｜'+esc(r.date)+'｜'+esc(r.amount)+' '+esc(r.currency)+'｜付款：'+esc(data.members[r.payer])+'<br><small>均分每人約 NT$'+(r.currency==='TWD'?r.amount:r.amount/data.rate).toFixed(0)+'</small></div>').join(''):'<p class="muted">目前沒有支出紀錄。</p>';
-
-}
-
-function saveSettings(){let m=document.getElementById('members').value.split(/\\n/).map(x=>x.trim()).filter(Boolean),rate=Number(document.getElementById('rate').value);if(!m.length||rate<=0){alert('請確認旅伴名單與匯率');return}data.members=m;data.rate=rate;save();renderLedger()}
-
-document.getElementById('expenseForm').onsubmit=e=>{e.preventDefault();data.records.push({date:expenseDate.value,title:expenseTitle.value,amount:Number(expenseAmount.value),currency:currency.value,payer:Number(payer.value)});save();e.target.reset();renderLedger()};
-
-function download(name,text,type){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-
-function backup(){download('峴港會安旅費備份.json',JSON.stringify(data,null,2),'application/json')}
-
-function exportCSV(){let rows=[['日期','項目','金額','幣別','付款人'],...data.records.map(r=>[r.date,r.title,r.amount,r.currency,data.members[r.payer]])];download('峴港會安旅費.csv','\\ufeff'+rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\\r\\n'),'text/csv')}
-
-document.getElementById('importFile').onchange=async e=>{try{let d=JSON.parse(await e.target.files[0].text());if(!Array.isArray(d.members)||!Array.isArray(d.records))throw Error();data=d;save();renderLedger()}catch{alert('備份檔格式不正確')}};
-
-document.getElementById('nav').onclick=e=>{let b=e.target.closest('button[data-page]');if(!b)return;document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('main section').forEach(x=>x.classList.toggle('active',x.id===b.dataset.page))};
-
-function tick(){let t=new Date('2027-01-18T00:00:00+08:00')-Date.now();if(t<0)t=0;days.textContent=Math.floor(t/86400000);hours.textContent=Math.floor(t/3600000)%24;mins.textContent=Math.floor(t/60000)%60}
-
-renderRooms();renderPlaces();renderLedger();tick();setInterval(tick,60000);
-
-</script>
-
-</body>
-
-</html>
+const EXPKEY='danang2027-expenses-v1';
+const defaultMembers=Array.from({length:16},(_,i)=>'旅伴'+String(i+1).padStart(2,'0'));
+let ledger={members:defaultMembers,rate:800,records:[]};
+try{const raw=localStorage.getItem(EXPKEY);if(raw){const v=JSON.parse(raw);if(Array.isArray(v.members)&&Array.isArray(v.records)&&Number(v.rate)>0)ledger=v}}catch(e){console.warn('無法讀取帳本',e)}
+function saveLedger(){try{localStorage.setItem(EXPKEY,JSON.stringify(ledger));return true}catch(e){alert('儲存失敗：請檢查瀏覽器儲存空間，並立即備份。');return false}}
+function money(v,c='TWD'){return (c==='VND'?'₫':'NT$')+Number(v||0).toLocaleString('zh-TW',{maximumFractionDigits:c==='VND'?0:2})}
+function escapeExpense(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderExpenseMembers(){document.getElementById('memberNames').value=ledger.members.join('\n');document.getElementById('exchangeRate').value=ledger.rate;document.getElementById('exPayer').innerHTML=ledger.members.map((n,i)=>'<option value="'+i+'">'+escapeExpense(n)+'</option>').join('');document.getElementById('exParticipants').innerHTML=ledger.members.map((n,i)=>'<label><input type="checkbox" class="ex-part" value="'+i+'" checked> '+escapeExpense(n)+'</label>').join('')}
+function toggleAllMembers(v){document.querySelectorAll('.ex-part').forEach(x=>x.checked=v)}
+function saveExpenseSettings(){const names=document.getElementById('memberNames').value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),rate=Number(document.getElementById('exchangeRate').value);if(!names.length||names.length>100||new Set(names).size!==names.length||!Number.isFinite(rate)||rate<=0){alert('請輸入不重複的旅伴名稱（最多100人）與有效匯率');return}if(ledger.records.length&&JSON.stringify(names)!==JSON.stringify(ledger.members)){alert('已有支出紀錄時不可更動旅伴人數或順序，以免舊帳錯位。可以直接修改同一行的顯示名稱。');if(names.length!==ledger.members.length)return;/* same indices retain identity */}ledger.members=names;ledger.rate=rate;if(saveLedger()){renderExpenseMembers();renderExpenseSummary()}}
+function amountTWD(r){return r.currency==='VND'?Number(r.amount)/Number(r.rate):Number(r.amount)}
+function renderExpenseSummary(){const paid=ledger.members.map(()=>0),owed=ledger.members.map(()=>0);let total=0;ledger.records.forEach(r=>{const a=amountTWD(r);if(!Number.isFinite(a)||!r.participants.length)return;total+=a;paid[r.payer]+=a;r.participants.forEach(i=>owed[i]+=a/r.participants.length)});const net=paid.map((x,i)=>x-owed[i]);const creditors=net.map((x,i)=>({i,a:x})).filter(x=>x.a>0.005),debtors=net.map((x,i)=>({i,a:-x})).filter(x=>x.a>0.005);const transfers=[];let a=0,b=0;while(a<debtors.length&&b<creditors.length){let v=Math.min(debtors[a].a,creditors[b].a);if(v>=0.005)transfers.push([debtors[a].i,creditors[b].i,v]);debtors[a].a-=v;creditors[b].a-=v;if(debtors[a].a<0.005)a++;if(creditors[b].a<0.005)b++}document.getElementById('expenseSummary').innerHTML='<div class="expense-stats"><div><small>共同支出（台幣約）</small><br><b>'+money(total)+'</b></div><div><small>16人均攤參考</small><br><b>'+money(total/ledger.members.length)+'</b></div></div><h3>每人已墊／應分攤／淨額（TWD）</h3>'+ledger.members.map((n,i)=>'<div class="expense-row"><b>'+escapeExpense(n)+'</b><br><small>已墊 '+money(paid[i])+' · 應攤 '+money(owed[i])+' · '+(net[i]>=0?'應收 ':'應付 ')+money(Math.abs(net[i]))+'</small></div>').join('')+'<h3>建議轉帳結算</h3>'+(transfers.length?transfers.map(t=>'<div class="expense-row">'+escapeExpense(ledger.members[t[0]])+' → '+escapeExpense(ledger.members[t[1]])+'：<b>'+money(t[2])+'</b></div>').join(''):'<p class="muted">目前沒有待結算款項。</p>')+'<p class="muted">換算金額可能有四捨五入差異；請依實際匯率及付款方式結算。</p>';document.getElementById('expenseRecords').innerHTML=ledger.records.length?ledger.records.slice().reverse().map(r=>'<div class="expense-row"><b>'+escapeExpense(r.title)+'</b> · '+money(r.amount,r.currency)+'<br><small>'+escapeExpense(r.date)+' · '+escapeExpense(r.category)+' · '+escapeExpense(ledger.members[r.payer])+'代墊 · '+r.participants.length+'人分攤 · 約 '+money(amountTWD(r))+'</small><br><button type="button" class="btn secondary" onclick="deleteExpense(\''+r.id+'\')">刪除</button></div>').join(''):'<p class="muted">尚無支出，新增第一筆後會自動計算。</p>'}
+function deleteExpense(id){if(!confirm('確定刪除這筆支出？'))return;ledger.records=ledger.records.filter(x=>x.id!==id);saveLedger();renderExpenseSummary()}
+document.getElementById('expenseForm').addEventListener('submit',e=>{e.preventDefault();const parts=[...document.querySelectorAll('.ex-part:checked')].map(x=>Number(x.value)),amount=Number(document.getElementById('exAmount').value);if(!parts.length||!Number.isFinite(amount)||amount<=0){alert('請輸入有效金額，並選擇至少一位分攤者');return}ledger.records.push({id:String(Date.now())+'-'+Math.random().toString(36).slice(2),date:document.getElementById('exDate').value,category:document.getElementById('exCategory').value,title:document.getElementById('exTitle').value.trim(),amount,currency:document.getElementById('exCurrency').value,rate:ledger.rate,payer:Number(document.getElementById('exPayer').value),participants:parts});if(saveLedger()){e.target.reset();document.getElementById('exDate').value='2027-01-18';toggleAllMembers(true);renderExpenseSummary()}});
+function downloadExpense(filename,data,type){const blob=new Blob([data],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000)}
+function exportExpenseJSON(){downloadExpense('峴港會安2027_旅費完整備份.json',JSON.stringify({version:1,exportedAt:new Date().toISOString(),...ledger},null,2),'application/json;charset=utf-8')}
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function exportExpenseCSV(){const rows=[['日期','分類','項目','原幣金額','幣別','該筆匯率(VND/TWD)','台幣約','墊款人','分攤者']];ledger.records.forEach(r=>rows.push([r.date,r.category,r.title,r.amount,r.currency,r.rate,amountTWD(r).toFixed(2),ledger.members[r.payer],r.participants.map(i=>ledger.members[i]).join('、')]));downloadExpense('峴港會安2027_旅費明細.csv','\ufeff'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8')}
+document.getElementById('expenseImport').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const v=JSON.parse(await f.text());if(!Array.isArray(v.members)||!v.members.length||!Array.isArray(v.records)||!(Number(v.rate)>0)||v.records.some(r=>!Number.isInteger(r.payer)||r.payer<0||r.payer>=v.members.length||!Array.isArray(r.participants)||!r.participants.length||r.participants.some(i=>!Number.isInteger(i)||i<0||i>=v.members.length)||!(Number(r.amount)>0)||!['VND','TWD'].includes(r.currency)||!(Number(r.rate)>0)))throw Error('備份格式不正確');if(!confirm('匯入會覆蓋目前帳本，確定繼續？'))return;ledger={members:v.members,rate:Number(v.rate),records:v.records};saveLedger();renderExpenseMembers();renderExpenseSummary();alert('帳本還原完成')}catch(err){alert('無法匯入：'+err.message)}finally{e.target.value=''}});
+renderExpenseMembers();renderExpenseSummary();
+</script></body></html>
