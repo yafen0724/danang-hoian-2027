@@ -1,1 +1,385 @@
 
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>京都紅葉漫遊 2026</title>
+<style>
+:root{--bg:#faf7f0;--ink:#35463b;--green:#68836c;--red:#b7654d;--line:#e7e1d7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 -apple-system,"Noto Sans TC",sans-serif}
+header{padding:32px 18px;background:linear-gradient(130deg,#e4eadc,#f5d9c8);text-align:center}
+h1{font-size:29px;margin:6px 0}
+h2{font-size:21px;color:var(--red)}
+h3{margin:5px 0}
+small{color:#7b857b}
+#count{font-size:28px;font-weight:bold;color:var(--red)}
+nav{position:sticky;top:0;display:flex;overflow:auto;background:white;z-index:5}
+nav button{flex:1;min-width:65px;border:0;background:white;color:#647568;padding:12px 3px}
+nav button.on{color:var(--red);border-bottom:3px solid var(--red);font-weight:bold}
+main{max-width:720px;margin:auto;padding:14px 14px 70px}
+.page{display:none}.page.on{display:block}
+.card{background:white;padding:17px;border-radius:16px;margin:12px 0;box-shadow:0 2px 12px #00000008}
+.btn,button.action{display:inline-block;background:var(--green);color:white;border:0;border-radius:9px;padding:9px 12px;margin:4px 3px 4px 0;text-decoration:none;font-size:14px}
+input,select{width:100%;padding:10px;border:1px solid #ddd;border-radius:9px;font-size:16px}
+input[type=checkbox]{width:auto}
+label{display:block;margin:9px 0 4px}
+.stop{border-left:3px solid #d6a18b;margin-left:7px;padding:4px 0 15px 14px}
+.stop b{color:var(--red)}
+.route{background:#f2f5ef;padding:9px;border-radius:9px;font-size:13px;margin-top:6px}
+.note{background:#faf0e9;padding:10px;border-radius:9px;font-size:13px}
+details{background:white;border-radius:14px;margin:12px 0;padding:15px}
+summary{font-weight:bold;cursor:pointer}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.checks label{background:#f5f5f0;padding:7px;border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+td,th{padding:8px 4px;border-bottom:1px solid #eee;text-align:left}
+</style>
+</head>
+<body>
+<header>
+<div>🍁 KYOTO AUTUMN JOURNAL</div>
+<h1>京都・紅葉漫遊</h1>
+<div>2026.11.30 — 12.04｜4人同行</div>
+<div class="card">
+<small>距離出發</small>
+<div id="count">計算中…</div>
+</div>
+</header>
+<nav>
+<button class="on" onclick="tab('home',this)">首頁</button>
+<button onclick="tab('plan',this)">行程</button>
+<button onclick="tab('leaf',this)">紅葉</button>
+<button onclick="tab('money',this)">分帳</button>
+<button onclick="tab('info',this)">資訊</button>
+</nav>
+<main>
+<section id="home" class="page on">
+<div class="card">
+<h2>✈️ 航班</h2>
+<p>11/30 去程｜捷星 GK50<br>桃園 02:30 → 關西 06:00</p>
+<p>12/4 回程<br>關西 23:10 → 桃園 12/5 01:30</p>
+</div>
+<div class="card">
+<h2>🏨 住宿</h2>
+<b>unito KYOTO STATION North</b>
+<p>11/30 入住、12/4 退房</p>
+<p>359-1 Tameikecho, Shimogyo-ku, Kyoto</p>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=unito+KYOTO+STATION+North" target="_blank">飯店導航</a>
+</div>
+<div class="card">
+<h2>📅 今日行程</h2>
+<p id="today"></p>
+</div>
+</section>
+
+<section id="plan" class="page">
+<h2>五天行程・交通導航</h2>
+<div id="days"></div>
+</section>
+
+<section id="leaf" class="page">
+<h2>🍁 紅葉預測參考</h2>
+<div class="card">
+<p>勝尾寺、箕面瀑布：11月中下旬通常是賞楓重點。</p>
+<p>清水寺、高台寺：11月下旬至12月初值得關注。</p>
+<p>嵐山、金閣寺：12月初可能仍有紅葉，依當年氣候。</p>
+<p>天橋立、伊根：12月初通常偏晚，以海景舟屋為主。</p>
+<div class="note">這是歷年季節參考，非即時2026紅葉預報。</div>
+<a class="btn" href="https://tenki.jp/kouyou/" target="_blank">查看最新紅葉情報</a>
+</div>
+<div class="card">
+<h2>🧥 穿搭建議</h2>
+<p>11/30 大阪：針織衫、保暖外套、防滑步行鞋。</p>
+<p>12/1 東山：清晨與夜楓需厚外套、圍巾。</p>
+<p>12/2 天橋立：海風較強，穿防風外套。</p>
+<p>12/3 嵐山：洋蔥式穿搭、舒適鞋。</p>
+<p>12/4 京都：方便穿脫的外套，適合購物。</p>
+<a class="btn" href="https://www.jma.go.jp/bosai/forecast/" target="_blank">最新天氣預報</a>
+</div>
+</section>
+
+<section id="money" class="page">
+<h2>💴 四人分帳</h2>
+<div class="card">
+<h3>旅伴名稱</h3>
+<div id="names"></div>
+<button class="action" onclick="saveNames()">儲存名稱</button>
+</div>
+<div class="card">
+<h3>新增支出</h3>
+<label>項目</label>
+<input id="item" placeholder="例如：計程車">
+<label>金額</label>
+<input id="amount" type="number" min="0" step="0.01">
+<label>幣別</label>
+<select id="currency">
+<option value="JPY">日圓</option>
+<option value="TWD">台幣</option>
+</select>
+<label>付款人</label>
+<select id="payer"></select>
+<label>分攤對象</label>
+<div id="checks" class="checks"></div>
+<button class="action" onclick="addExpense()">新增記帳</button>
+</div>
+<div class="card">
+<h3>支出紀錄</h3>
+<div id="records"></div>
+</div>
+<div class="card">
+<h3>結算明細</h3>
+<div id="settle"></div>
+</div>
+<div class="card">
+<h3>備份</h3>
+<button class="action" onclick="backup()">匯出 JSON</button>
+<label>匯入 JSON 備份</label>
+<input type="file" accept=".json" onchange="restore(event)">
+<p class="note">記帳資料存在目前瀏覽器，不會自動同步其他手機。請定期備份。</p>
+</div>
+</section>
+
+<section id="info" class="page">
+<div class="card">
+<h2>📌 待確認事項</h2>
+<p>□ 12/2 天橋立一日遊訂購</p>
+<p>□ 12/3 划船與茶屋營業</p>
+<p>□ 12/4 敘敘苑午餐預約</p>
+<p>□ 12/4 HARUKA 實際班次</p>
+</div>
+<div class="card">
+<h2>交通資訊</h2>
+<a class="btn" href="https://www.westjr.co.jp/global/tc/" target="_blank">JR 西日本</a>
+<a class="btn" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+</div>
+</section>
+</main>
+
+<script>
+const itinerary=[
+{date:"11/30",title:"勝尾寺・箕面瀑布・梅田",stops:[
+["06:00","關西機場","Kansai International Airport","入境後搭 JR 至大阪站，約65–80分鐘；票價依車種"],
+["08:30","大阪站寄放行李","Osaka Station","大型行李寄放；時間依通關狀況"],
+["09:30","前往勝尾寺","Katsuoji Temple","大阪梅田搭御堂筋線至箕面萱野，再轉計程車"],
+["11:00","勝尾寺賞楓","Katsuoji Temple","參觀達摩與寺院"],
+["12:30","箕面瀑布","Minoh Falls","計程車至可通行的上方停車區，步行賞瀑布；道路限制待確認"],
+["15:00","箕面站","Hankyu Minoh Station","沿步道下行，阪急電車經石橋阪大前回梅田"],
+["16:00","梅田毛線店","Yuzawaya Umeda Hankyu Sanbangai","毛線與手作用品"],
+["18:00","京都飯店","unito KYOTO STATION North","大阪站取行李，JR新快速約30分鐘至京都，再步行至飯店"]]},
+{date:"12/1",title:"清水寺・祇園・高台寺",stops:[
+["05:30","飯店出發","unito KYOTO STATION North","建議計程車至東山，約15–25分鐘"],
+["05:50","二年坂、三年坂","Sannenzaka Kyoto","清晨空景拍照"],
+["07:15","清水寺","Kiyomizudera Kyoto","從三年坂步行前往"],
+["10:00","東山散步","Ninenzaka Kyoto","早餐、特色小店"],
+["13:00","花見小路","Hanamikoji Kyoto","步行至祇園、下午茶"],
+["17:00","高台寺夜楓","Kodaiji Kyoto","祇園步行約15–20分鐘；夜間開放待確認"]]},
+{date:"12/2",title:"天橋立・伊根舟屋",stops:[
+["08:30","京都站集合","Kyoto Station Hachijo Exit","一日遊待訂購，集合時間僅示意"],
+["上午","天橋立展望台","Amanohashidate View Land","遊覽車前往，纜車是否包含依方案"],
+["下午","伊根舟屋","Ine Funaya Kyoto","遊覽車前往，遊船是否包含依方案"],
+["傍晚","返回京都站","Kyoto Station","實際返程時間依旅行社"]]},
+{date:"12/3",title:"嵐山・金閣寺",stops:[
+["08:00","飯店出發","Kyoto Station","前往京都站，搭JR嵯峨野線"],
+["09:00","嵐山竹林","Arashiyama Bamboo Grove","JR嵯峨嵐山站步行約15分鐘"],
+["10:00","渡月橋","Togetsukyo Bridge","從竹林步行約15–20分鐘"],
+["10:30","划船／琴ヶ瀬茶屋","Arashiyama Boat Rental","步行至河岸；茶屋營業、渡船及划船依當天狀況"],
+["12:00","嵐山午餐","Arashiyama Kyoto","附近自由用餐"],
+["14:30","金閣寺","Kinkakuji Kyoto","嵐山搭嵐電轉巴士，或四人共乘計程車；約30–60分鐘"],
+["17:00","返回飯店","unito KYOTO STATION North","巴士／地鐵或計程車返回"]]},
+{date:"12/4",title:"錦市場・敘敘苑・河原町",stops:[
+["09:30","飯店退房寄放行李","unito KYOTO STATION North","先確認飯店寄物服務"],
+["10:00","錦市場","Nishiki Market Kyoto","地鐵至四條附近再步行；部分店家較晚開門"],
+["12:00","敘敘苑京都伊勢丹","Jojoen Kyoto Isetan","從錦市場搭地鐵回京都站，午餐建議預約"],
+["13:30","寺町、新京極","Teramachi Shopping Street Kyoto","京都站搭地鐵至四條，步行逛街"],
+["15:00","四條河原町","Shijo Kawaramachi Kyoto","日系雜貨、抹茶、伴手禮"],
+["17:00","返回飯店取行李","unito KYOTO STATION North","搭地鐵或計程車回飯店"],
+["18:15","京都站搭HARUKA","Kyoto Station","往關西機場約75–85分鐘；班次待確認"],
+["19:45","關西機場","Kansai International Airport","辦理登機、託運及出境"],
+["23:10","回程起飛","Kansai International Airport","返台，12/5 01:30抵達桃園"]]}
+];
+function tab(id,btn){
+document.querySelectorAll(".page").forEach(x=>x.classList.remove("on"));
+document.getElementById(id).classList.add("on");
+document.querySelectorAll("nav button").forEach(x=>x.classList.remove("on"));
+btn.classList.add("on");
+window.scrollTo(0,0);
+}
+function mapUrl(q){
+return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+}
+function renderDays(){
+const root=document.getElementById("days");
+root.innerHTML="";
+itinerary.forEach((d,i)=>{
+const details=document.createElement("details");
+if(i===0)details.open=true;
+const summary=document.createElement("summary");
+summary.textContent=d.date+"｜"+d.title;
+details.appendChild(summary);
+d.stops.forEach(s=>{
+const div=document.createElement("div");
+div.className="stop";
+const heading=document.createElement("div");
+const b=document.createElement("b");
+b.textContent=s[0]+"｜"+s[1];
+heading.appendChild(b);
+const route=document.createElement("div");
+route.className="route";
+route.textContent="🚆 交通／提醒："+s[3];
+const a=document.createElement("a");
+a.className="btn";
+a.href=mapUrl(s[2]);
+a.target="_blank";
+a.rel="noopener";
+a.textContent="📍 Google Maps";
+div.append(heading,route,a);
+details.appendChild(div);
+});
+root.appendChild(details);
+});
+}
+function countdown(){
+const now=new Date();
+const start=new Date("2026-11-30T02:30:00+08:00");
+const end=new Date("2026-12-05T01:30:00+08:00");
+const diff=start-now;
+if(diff>0){
+const days=Math.floor(diff/86400000);
+const hours=Math.floor(diff%86400000/3600000);
+const mins=Math.floor(diff%3600000/60000);
+document.getElementById("count").textContent=days+"天 "+hours+"時 "+mins+"分";
+}else if(now<end){
+document.getElementById("count").textContent="旅行進行中 🍁";
+}else{
+document.getElementById("count").textContent="旅行圓滿完成 ❤️";
+}
+const local=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).format(now);
+const idx=["2026-11-30","2026-12-01","2026-12-02","2026-12-03","2026-12-04"].indexOf(local);
+document.getElementById("today").textContent=idx>=0?itinerary[idx].date+"｜"+itinerary[idx].title:"旅行期間會自動顯示當天行程。";
+}
+const KEY="kyoto_2026_wallet_v1";
+let state={names:["旅伴1","旅伴2","旅伴3","旅伴4"],expenses:[]};
+try{
+const saved=JSON.parse(localStorage.getItem(KEY));
+if(saved&&Array.isArray(saved.names)&&saved.names.length===4&&Array.isArray(saved.expenses))state=saved;
+}catch(e){}
+function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+function renderNames(){
+const root=document.getElementById("names");
+root.innerHTML="";
+state.names.forEach((n,i)=>{
+const label=document.createElement("label");
+label.textContent="旅伴"+(i+1);
+const input=document.createElement("input");
+input.id="name"+i;
+input.value=n;
+root.append(label,input);
+});
+}
+function saveNames(){
+state.names=state.names.map((n,i)=>document.getElementById("name"+i).value.trim()||n);
+save();renderWallet();alert("名稱已儲存");
+}
+function renderWallet(){
+const payer=document.getElementById("payer");
+const checks=document.getElementById("checks");
+payer.innerHTML="";checks.innerHTML="";
+state.names.forEach((n,i)=>{
+const opt=document.createElement("option");
+opt.value=i;opt.textContent=n;payer.appendChild(opt);
+const label=document.createElement("label");
+const cb=document.createElement("input");
+cb.type="checkbox";cb.value=i;cb.checked=true;
+label.append(cb,document.createTextNode(" "+n));
+checks.appendChild(label);
+});
+renderRecords();
+}
+function addExpense(){
+const title=document.getElementById("item").value.trim();
+const amount=Number(document.getElementById("amount").value);
+const currency=document.getElementById("currency").value;
+const payer=Number(document.getElementById("payer").value);
+const members=Array.from(document.querySelectorAll("#checks input:checked")).map(x=>Number(x.value));
+if(!title||!Number.isFinite(amount)||amount<=0||!members.length){
+alert("請填寫項目、有效金額並選擇分攤對象");return;
+}
+state.expenses.push({id:Date.now()+Math.random(),title,amount,currency,payer,members});
+save();renderRecords();
+document.getElementById("item").value="";
+document.getElementById("amount").value="";
+}
+function renderRecords(){
+const root=document.getElementById("records");
+root.innerHTML="";
+if(!state.expenses.length)root.textContent="目前尚無記帳紀錄。";
+state.expenses.forEach(e=>{
+const div=document.createElement("div");
+div.className="card";
+div.style.border="1px solid #eee";
+const p=document.createElement("p");
+p.textContent=e.title+"｜"+e.currency+" "+e.amount.toLocaleString()+"｜付款："+state.names[e.payer];
+const small=document.createElement("small");
+small.textContent="分攤："+e.members.map(i=>state.names[i]).join("、");
+const btn=document.createElement("button");
+btn.className="action";
+btn.textContent="刪除";
+btn.onclick=()=>{
+if(confirm("確定刪除這筆支出？")){
+state.expenses=state.expenses.filter(x=>x.id!==e.id);
+save();renderRecords();
+}
+};
+div.append(p,small,document.createElement("br"),btn);
+root.appendChild(div);
+});
+const settle=document.getElementById("settle");
+settle.innerHTML="";
+["JPY","TWD"].forEach(currency=>{
+const balances=[0,0,0,0];
+state.expenses.filter(e=>e.currency===currency).forEach(e=>{
+balances[e.payer]+=e.amount;
+const share=e.amount/e.members.length;
+e.members.forEach(i=>balances[i]-=share);
+});
+const heading=document.createElement("h3");
+heading.textContent=currency==="JPY"?"日圓結算":"台幣結算";
+settle.appendChild(heading);
+balances.forEach((b,i)=>{
+const p=document.createElement("p");
+p.textContent=state.names[i]+"："+(b>=0?"應收 ":"應付 ")+currency+" "+Math.abs(b).toFixed(2);
+settle.appendChild(p);
+});
+});
+}
+function backup(){
+const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+downloadBlob(blob,"kyoto-wallet-backup.json");
+}
+function downloadBlob(blob,name){
+const url=URL.createObjectURL(blob);
+const a=document.createElement("a");
+a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function restore(ev){
+const file=ev.target.files[0];if(!file)return;
+const reader=new FileReader();
+reader.onload=()=>{
+try{
+const data=JSON.parse(reader.result);
+if(!Array.isArray(data.names)||data.names.length!==4||!Array.isArray(data.expenses))throw Error();
+if(!confirm("匯入會覆蓋目前記帳資料，確定繼續？"))return;
+state=data;save();renderNames();renderWallet();alert("匯入成功");
+}catch(e){alert("備份檔格式不正確");}
+};
+reader.readAsText(file);
+}
+renderDays();renderNames();renderWallet();countdown();
+setInterval(countdown,60000);
+</script>
+</body>
+</html>
